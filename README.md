@@ -9,40 +9,61 @@
 ## 📁 الهيكل
 
 ```
-igarden_kb/
-├── README.md                    ← هذا الملف
-├── INDEX.md                     ← الفهرس الرئيسي (ابدأ هنا)
+igarden-kb/
+├── README.md                  ← هذا الملف
+├── INDEX.md                   ← الفهرس الرئيسي (ابدأ هنا)
 │
-├── customers/                   ← العملاء النشطون
+├── company/                   ← هوية الشركة
+│   ├── profile.md             ← الهوية، الـ domains، البنك، الحسابات
+│   └── team.md                ← الفريق + استراتيجية المساعد التقني
+│
+├── customers/                 ← ملف لكل عميل
 │   ├── 001-khamis-mushait.md
 │   ├── 002-ghulah-lettuce.md
 │   └── 003-ahsa-rayana.md
 │
-├── infrastructure/              ← البنية التحتية
-│   ├── pi5-customer1-haos.md
+├── infrastructure/            ← ملف لكل جهاز فعلي
+│   ├── pi5-customer1-khamis.md
+│   ├── pi5-customer2-ghulah.md
+│   ├── esp32-ghulah-tank.md
 │   ├── cm5-osfan-hub.md
-│   └── pi5-fastapi-native.md
+│   ├── pi5-fastapi-native.md
+│   ├── hp-elitebook-ali.md
+│   └── ahsa-master-hub.md
 │
-├── architecture/                ← المعماريات
-│   ├── ha-vs-fastapi-decision.md
-│   └── three-projects-evolution.md
+├── products/                  ← ملف لكل منتج / خط
+│   ├── ha-stack-product.md    ← المنتج التشغيلي الحالي
+│   ├── igarden-hub.md         ← Backend مركزي (R&D)
+│   ├── smart-os-native.md     ← المنتج النهائي (FastAPI)
+│   ├── demo-igarden-sa.md     ← Marketing demo
+│   └── knowledge-os.md        ← رؤية SaaS مستقبلية
 │
-├── decisions/                   ← القرارات الاستراتيجية
-│   └── 2026-04-27-demo-deployment.md
+├── projects/                  ← حالة كل مشروع جارٍ
+│   ├── 002-ghulah-completion.md
+│   ├── 003-ahsa-installation.md
+│   ├── master-image.md
+│   ├── demo-deployment.md
+│   ├── website-v1.4.md
+│   ├── pitch-sunbolah.md
+│   └── knowledge-base.md
 │
-├── operations/                  ← العمليات اليومية
-│   ├── deployment-checklist.md
-│   └── customer-onboarding.md
-│
-├── conversations/               ← أرشيف المحادثات الخام
-│   ├── 2026-04-22/
-│   ├── 2026-04-27/
-│   └── 2026-04-28/
-│
-└── scripts/                     ← أتمتة
-    ├── new-conversation.sh
-    └── git-sync.sh
+└── old/                       ← الأرشيف القديم (مؤقتاً)
+    ├── conversations/2026-04-27/
+    ├── scripts/
+    └── …
 ```
+
+---
+
+## 🧭 قواعد الكتابة في الـ KB
+
+1. **لا تكرار** — كل معلومة تُكتب في **ملف واحد فقط**؛ بقية الملفات تُشير إليها بـ relative link.
+2. **ملف واحد لكل كيان** — عميل، جهاز، منتج، مشروع.
+3. **company/ = الهوية** | **customers/ = من** | **infrastructure/ = على ماذا** | **products/ = ماذا نقدّم** | **projects/ = ما نعمل عليه الآن**.
+4. **اكتب بالعربية** (الفريق عربي).
+5. **استخدم الجداول والـ emojis للحالة** 🟢🟡🔴.
+6. **اربط بين الملفات** عبر relative links بدلاً من نسخ المحتوى.
+7. **لا تحذف معلومة** — انقلها لـ `old/` إذا قديمة.
 
 ---
 
@@ -52,18 +73,28 @@ igarden_kb/
 
 1. ارفع المجلد كـ ZIP لـ Project Knowledge في Claude.ai
 2. ابدأ كل محادثة بـ: **"اقرأ INDEX.md"**
-3. Claude سيعرف الخريطة كاملة ويتنقّل بذكاء
+3. Claude سيعرف الخريطة كاملة ويتنقّل بذكاء عبر الروابط
+
+### للقراءة (Claude.ai + GitHub MCP):
+
+```
+"اقرأ INDEX.md من iGardenSA/igarden-kb"
+```
 
 ### للكتابة (بعد كل محادثة):
 
-1. اطلب من Claude: **"اكتب ملف معرفي تفصيلي لما تم في هذه الجلسة"**
-2. احفظه في `conversations/YYYY-MM-DD/`
-3. شغّل: `./scripts/git-sync.sh "وصف ما حدث"`
+1. اطلب من Claude: **"حدّث الملفات المعنية في الـ KB"** (لا تنشئ ملف archive جديد إلا إذا كان قراراً مرجعياً مهماً)
+2. اعتمد قاعدة "ملف واحد لكل كيان" — لا تُكرر المعلومات
+3. ادفع لـ GitHub:
+   ```bash
+   git add . && git commit -m "وصف التحديث" && git push
+   ```
 
 ### من الجوال:
 
-- استخدم **Termius app** للـ SSH للجهاز
-- أو استخدم **Claude.ai App + GitHub MCP**
+- **Termius app** للـ SSH للجهاز
+- **Claude.ai App + GitHub MCP** للوصول المباشر للـ KB
+- مباشرة من GitHub: `https://github.com/iGardenSA/igarden-kb/blob/main/INDEX.md`
 
 ---
 
@@ -71,39 +102,29 @@ igarden_kb/
 
 | التكرار | المهمة |
 |---|---|
-| **بعد كل محادثة** | حفظ ملخص في `conversations/YYYY-MM-DD/` |
+| **بعد كل محادثة** | تحديث الملفات المعنية في `customers/`/`infrastructure/`/`projects/` |
 | **يومياً** | تحديث `INDEX.md` إذا حدثت تغييرات كبرى |
-| **أسبوعياً** | مراجعة `customers/` و `infrastructure/` |
+| **أسبوعياً** | مراجعة `customers/`، `infrastructure/`، والمهام المفتوحة |
 | **شهرياً** | رفع ZIP كامل لـ Project Knowledge في Claude.ai |
 
 ---
 
 ## 📝 معايير الملفات
 
-كل ملف يجب أن يحوي:
+كل ملف يحوي:
 
 ```markdown
 # عنوان الملف
 
-> **تاريخ آخر تحديث:** YYYY-MM-DD
-> **المسؤول:** علي غنيمة
-> **الحالة:** [نشط / مؤرشف / مسودة]
+> **آخر تحديث:** YYYY-MM-DD
+> **الحالة:** [🟢 نشط / 🟡 قيد العمل / 🔴 مشكلة / ✅ مكتمل]
 
-## 1. الملخص (3-5 أسطر)
-...
+## 📌 الملخص (3-5 أسطر)
+…
 
-## 2. التفاصيل
-...
+## (أقسام تفصيلية حسب نوع الملف)
 
-## 3. القرارات المتخذة
-- [x] قرار 1
-- [x] قرار 2
-
-## 4. المهام المفتوحة
-- [ ] مهمة 1
-- [ ] مهمة 2
-
-## 5. الروابط
+## 🔗 ملفات ذات صلة
 - [ملف ذو صلة](../path/file.md)
 ```
 
@@ -111,17 +132,17 @@ igarden_kb/
 
 ## 🛡️ النسخ الاحتياطي
 
-- **Local:** على HP EliteBook في `~/iGarden_KB/`
-- **Cloud 1:** GitHub repo `iGardenSA/igarden-kb`
-- **Cloud 2:** Google Drive (تلقائي مع Linux Mint)
+| الطبقة | الموقع |
+|---|---|
+| **Local** | على HP EliteBook في `~/iGarden_KB/` (راجع [infrastructure/hp-elitebook-ali.md](./infrastructure/hp-elitebook-ali.md)) |
+| **Cloud 1** | GitHub repo `iGardenSA/igarden-kb` |
+| **Cloud 2** | Google Drive (تلقائي مع Linux Mint) |
 
 ---
 
 ## 📞 للتواصل
 
-- **المالك:** علي محمد غنيمة
-- **البريد:** info@igarden.sa
-- **الموقع:** https://igarden.sa
+راجع [company/profile.md](./company/profile.md) و [company/team.md](./company/team.md).
 
 ---
 
