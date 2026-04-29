@@ -380,8 +380,16 @@
 2026-04-25 | hq-strategy | Hybrid AI architecture mapped: CM5 + Pi 5 + Dell + Mint roles distributed
 2026-04-25 | hq-strategy | Vision AI plan: Pi 5 + AI HAT + IMX500
 2026-04-25 | hq-strategy | Session closed; Master Doc still on v1.0 in Project KB (gap flagged for v1.5 build)
+2026-04-26 | hq-strategy | BLOCK-010 session (Master Doc v2.0 + Tech Appendix v3.0 rebuild) — compacted once
+2026-04-26 | hq-strategy | Master Doc v2.0 produced (2,684 lines / 28 sections) — supersedes earlier v1.5 plan
+2026-04-26 | hq-strategy | Tech Appendix v3.0 produced (17 sections / 14 ADRs T001-T014)
+2026-04-26 | hq-strategy | Gemini Gem Instructions v2.0 produced (3 formats: TXT/MD/DOCX)
+2026-04-26 | hq-strategy | Architecture regions expanded: 5 regions (was 3)
+2026-04-26 | hq-strategy | Master Doc Archive Policy adopted (permanent versioning policy)
+2026-04-26 | hq-strategy | v1.4 deleted by mistake → recovered → produced v2.0 better
 2026-04-29 | hq-strategy | PROJECT_STATE.md approach SUPERSEDED by events.md as Source of Truth (different mechanism, same purpose)
 ```
+
 
 ### pitch-deck
 

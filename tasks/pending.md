@@ -75,13 +75,31 @@
 > الركائز الثلاث، iGarden Tower داخل Hydroponics، عسفان (بدلاً من 5 محميات)،
 > ADRs T009-T014، Hybrid AI Architecture.
 
-- [ ] **T-DOC-001:** بناء Master Doc v1.5 من events.md + brand-messaging + pitch-deck (محادثة قصيرة منفصلة)
-- [ ] **T-DOC-002:** رفع v1.5 لـ Project Knowledge + حذف v1.0
+> 🆕 **تحديث 2026-04-26 (BLOCK-010):** أُنتج Master Doc **v2.0** (2,684 سطر / 28 قسم) + Tech Appendix v3.0 — يستبدل خطّة v1.5.
+
+- [ ] **T-DOC-001:** رفع Master Doc v2.0 إلى Project Knowledge + حذف v1.0
+- [ ] **T-DOC-002:** رفع Tech Appendix v3.0 إلى Project Knowledge
 - [ ] **T-DOC-003:** رفع PROJECT_STATE.md (إن استمرّ كقناة موازية لـ events.md) أو حذفه إن استبدل كلياً
 
 ### `gemini-gem` — تجهيز
 
-- [ ] **T-OPS-001:** لصق Gemini Gem Instructions في صفحة الـ Gem (473 سطر جاهزة)
+- [ ] **T-OPS-001:** لصق Gemini Gem Instructions v2.0 في صفحة الـ Gem (3 صيغ متاحة: TXT/MD/DOCX)
+
+### `meetings` — مكالمات واجتماعات الأسبوع 🔴
+
+- [ ] **T-MTG-001:** مكالمة محمد الكثيري — **الأحد** (لا تؤجَّل)
+- [ ] **T-MTG-002:** اتصال محاسب قانوني (GOSI) — الأحد/الإثنين
+- [ ] **T-MTG-003:** محادثة م. ريم — هذا الأسبوع
+- [ ] **T-MTG-004:** اجتماع شراكاتي ثلاثي — الخميس
+- [ ] **T-MTG-005:** استشارة محامي IP (تسجيل العلامة)
+- [ ] **T-MTG-006:** استشارة محامي عمل
+- [ ] **T-MTG-007:** جلسة مع سعيد لإغلاق الأرقام المالية
+- [ ] **T-MTG-008:** ملف الموظفين والرواتب (قادم منفصلاً)
+- [ ] **T-MTG-009:** ملف الاشتراكات الشهرية (قادم منفصلاً)
+
+### `briefs` — أسئلة معلَّقة
+
+- [ ] **T-DOC-004:** قرار الـ 3 Briefs — تحديث أم استخدام كما هي؟ (السؤال طُرح ولم يُجَب)
 
 ### `info@igarden.sa` — Single Point of Failure 🟡
 
