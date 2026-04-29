@@ -68,6 +68,21 @@
   - `secrets-inventory.md` (جرد كامل بدون قيم)
   - `incident-response.md` (playbook لأيّ تسريب مستقبلي)
 
+### `master-doc` — تحديث v1.0 → v1.5 في Project Knowledge
+
+> ⚠️ Master Doc في Project Knowledge ما زال v1.0 — لا يحوي:
+> Timeline 2024-2025-2026، Tagline "ازرع بذكاء"، التموضع "ننفّذ · نُوطّن · نُطوّر"،
+> الركائز الثلاث، iGarden Tower داخل Hydroponics، عسفان (بدلاً من 5 محميات)،
+> ADRs T009-T014، Hybrid AI Architecture.
+
+- [ ] **T-DOC-001:** بناء Master Doc v1.5 من events.md + brand-messaging + pitch-deck (محادثة قصيرة منفصلة)
+- [ ] **T-DOC-002:** رفع v1.5 لـ Project Knowledge + حذف v1.0
+- [ ] **T-DOC-003:** رفع PROJECT_STATE.md (إن استمرّ كقناة موازية لـ events.md) أو حذفه إن استبدل كلياً
+
+### `gemini-gem` — تجهيز
+
+- [ ] **T-OPS-001:** لصق Gemini Gem Instructions في صفحة الـ Gem (473 سطر جاهزة)
+
 ### `info@igarden.sa` — Single Point of Failure 🟡
 
 - [ ] **T-SEC-009 — تخفيف خطر `info@igarden.sa` كنقطة فشل وحيدة**
