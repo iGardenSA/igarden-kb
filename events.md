@@ -347,6 +347,25 @@
 2026-04-29 | termux | Failed approach: ssh-dss to legacy device (192.168.8.172) — algorithm not supported
 ```
 
+### tailnet
+
+```
+2026-04-29 | tailnet | Tailnet device map documented: hp-elitebook, ali-mobile, garden-hub, vision-hub, dell-osfan
+2026-04-29 | tailnet | Tailscale account decision: ali@igarden.sa
+2026-04-29 | tailnet | Hostname for laptop in Tailnet set: hp-elitebook
+2026-04-29 | tailnet | Setup order locked: laptop → Note 22 → CM5 → Pi 5
+2026-04-29 | tailnet | Shared layer composition adopted: Notion + Drive + GitHub + Tailscale + Claude Projects
+```
+
+### founder
+
+```
+2026-04-29 | founder | Daily workflow customization started: laptop ↔ Note 22 link
+2026-04-29 | founder | Full ecosystem map drawn: laptop + mobile + shared layer
+2026-04-29 | founder | Tailscale install commands for Linux Mint 22 received and ready to execute
+```
+
+
 ### pitch-deck
 
 ```
