@@ -23,7 +23,7 @@
 
 **4. Telegram Bot**
 - بوت `@igarden_sa_bot` شغّال
-- Token: `7798622043:AAHS7XMWvXzrpTvpNrqB4ELKee__ucG85lE`
+- Token: `[REDACTED — see password manager]`
 - n8n workflow: Telegram → Claude API → Send Reply
 - Model: `claude-sonnet-4-5`
 - API Key: `igarden-telegram-bot` على Anthropic Console

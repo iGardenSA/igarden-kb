@@ -66,7 +66,7 @@
 ## 4. 🤖 Telegram Bot
 
 - **Bot:** `@igarden_sa_bot`
-- **Token:** `7798622043:AAHS7XMWvXzrpTvpNrqB4ELKee__ucG85lE`
+- **Token:** `[REDACTED — see password manager]`
 - **n8n Workflow:**
   ```
   Telegram Trigger → Claude API → Send Reply

@@ -75,8 +75,8 @@
 
 ### مفاتيح ESPHome:
 ```
-api encryption: Lc5+NNXoaOu9y1/rpOA+odCGDjMzp3Zzy879af3tz7w=
-ota password:   c21a718a835f2344623a8b2238540436
+api encryption: [REDACTED — see password manager]
+ota password:   [REDACTED — see password manager]
 mqtt prefix:    igarden/tank
 mqtt user:      mqtt_user
 ```
