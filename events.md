@@ -40,10 +40,33 @@
 2026-04-27 | kb | Decision: Public GitHub repo iGardenSA/igarden-kb as Single Source of Truth
 2026-04-28 | kb | Repo iGardenSA/igarden-kb created (public) on GitHub
 2026-04-28 | kb | Initial INDEX.md + README.md committed
+2026-04-29 | kb | INDEX.md original was empty in zip (14 bytes) — reconstructed manually from KB content
+2026-04-29 | kb | Reference URL adopted: raw.githubusercontent.com/iGardenSA/igarden-kb/main/README.md
 2026-04-29 | kb | Full session report 2026-04-29 added
 2026-04-29 | kb | SESSIONS.md created
 2026-04-29 | kb | 9 decisions + 3 infrastructure + 2 architecture + 3 ops files added
 2026-04-29 | kb | events.md adopted as Source of Truth
+2026-04-29 | kb | tasks/pending.md created
+2026-04-29 | kb | projects/telegram-bot.md created
+2026-04-29 | kb | infrastructure/cm5-osfan-hub.md renamed to cm5-hub.md
+2026-04-29 | kb | SESSIONS.md rewritten as comprehensive session log
+2026-04-29 | kb | README.md restructured with current-state snapshot + Event-Sourced workflow
+```
+
+### secrets-leak-warning
+
+```
+2026-04-29 | secrets-leak-warning | Telegram bot token published in SESSIONS.md (public repo) — ROTATE
+2026-04-29 | secrets-leak-warning | ESPHome api_encryption_key + ota_password published in pi5-customer2-ghulah.md (public repo) — ROTATE
+```
+
+### github-repo
+
+```
+2026-04-28 | github-repo | iGardenSA/igarden-kb created on GitHub
+2026-04-28 | github-repo | First commit + push successful from Termux
+2026-04-29 | github-repo | Visibility changed to public via gh repo edit --visibility public
+2026-04-29 | github-repo | Confirmed: Claude.ai reads via raw URL without MCP connector
 ```
 
 ### website
@@ -111,33 +134,71 @@
 2026-04-27 | cm5 | n8n owner: info@igarden.sa, Portainer admin: igarden-admin
 2026-04-27 | cm5 | Sensor Simulator workflow imported (4 sensors / 5 min)
 2026-04-27 | cm5 | MQTT credential in n8n: incomplete
+2026-04-29 | cm5 | Discovered locally via direct keyboard+screen (SSH from mobile failed: No route to host)
 2026-04-29 | cm5 | IP changed: .21 → .102 (current: 192.168.8.102)
-2026-04-29 | cm5 | Claude Code v2.1.121 installed
+2026-04-29 | cm5 | Node.js v20.20.2 installed (apt + nodesource setup_20.x)
+2026-04-29 | cm5 | Claude Code v2.1.121 installed (npm install -g @anthropic-ai/claude-code)
 2026-04-29 | cm5 | n8n container rebuilt with N8N_SECURE_COOKIE=false + DNS 8.8.8.8
-2026-04-29 | cm5 | All Docker containers set to restart: unless-stopped
+2026-04-29 | cm5 | All Docker containers set to restart: unless-stopped (n8n + homeassistant + portainer + igarden-postgres)
+2026-04-29 | cm5 | systemctl enable docker (auto-start on boot)
+2026-04-29 | cm5 | cloudflared added as 5th persistent container
+```
+
+### claude-code
+
+```
+2026-04-29 | claude-code | v2.1.121 installed on CM5 (global npm)
+2026-04-29 | claude-code | OAuth login completed (Welcome back Ali, Opus 4.7 1M ctx, info@igarden.sa)
+2026-04-29 | claude-code | Working directory set: ~/igarden-kb on CM5
 ```
 
 ### n8n
 
 ```
 2026-04-27 | n8n | Local URL: http://192.168.8.21:5678 (initial)
+2026-04-29 | n8n | Old container deleted (HTTPS-only blocked access); basic auth credentials lost
+2026-04-29 | n8n | Recreated with N8N_SECURE_COOKIE=false (HTTP allowed in LAN)
+2026-04-29 | n8n | DNS resolution fixed via --dns 8.8.8.8 --dns 8.8.4.4 (verified: ping api.telegram.org)
 2026-04-29 | n8n | Local URL updated: http://192.168.8.102:5678
+2026-04-29 | n8n | WEBHOOK_URL env variable added (trycloudflare URL)
+2026-04-29 | n8n | First trycloudflare URL: https://eval-genesis-nationally-poultry.trycloudflare.com (expired)
+2026-04-29 | n8n | Second trycloudflare URL: https://picking-precise-powder-blades.trycloudflare.com
 2026-04-29 | n8n | Webhook URL temporary via trycloudflare (changes on restart)
-2026-04-29 | n8n | Telegram → Claude API → Reply workflow active
+2026-04-29 | n8n | Telegram → Claude API → Reply workflow active (3 nodes)
 ```
 
 ### telegram-bot
 
 ```
-2026-04-29 | telegram-bot | @igarden_sa_bot activated via n8n + Claude API (claude-sonnet-4-5)
+2026-04-29 | telegram-bot | Decision: Telegram chosen over WhatsApp (free, 2 days vs 1 week + fees)
+2026-04-29 | telegram-bot | Created via BotFather (/newbot) — name: iGarden Assistant
+2026-04-29 | telegram-bot | Username: @igarden_sa_bot
+2026-04-29 | telegram-bot | Token issued (stored externally, NOT in this repo)
+2026-04-29 | telegram-bot | Workflow imported as 3 nodes: Telegram Trigger → HTTP Claude API → Telegram Send
+2026-04-29 | telegram-bot | Bug fix: model name claude-sonnet-4-20250514 → claude-sonnet-4-5
+2026-04-29 | telegram-bot | Fix: workflow stuck as draft — re-published manually
+2026-04-29 | telegram-bot | Activated via n8n + Claude API (claude-sonnet-4-5)
 2026-04-29 | telegram-bot | System prompt: Arabic iGarden assistant
+2026-04-29 | telegram-bot | Verified: receives Arabic messages and replies with iGarden context
+```
+
+### anthropic-api
+
+```
+2026-04-29 | anthropic-api | New API key created: name "igarden-telegram-bot", workspace Default
+2026-04-29 | anthropic-api | Key stored in n8n HTTP node only (NOT in this repo)
 ```
 
 ### cloudflare-tunnel
 
 ```
+2026-04-29 | cloudflare-tunnel | Cloudflare account created (info@igarden.sa)
 2026-04-29 | cloudflare-tunnel | Tunnel iGarden-cm5 created (ID: 3942be75-672a-4de6-88e4-1c5d526a2274)
-2026-04-29 | cloudflare-tunnel | cloudflared container deployed on CM5 (status: Healthy, region: jed01)
+2026-04-29 | cloudflare-tunnel | cloudflared container deployed on CM5 (restart: unless-stopped)
+2026-04-29 | cloudflare-tunnel | Status: Healthy — 4 connections (jed01 + fra18)
+2026-04-29 | cloudflare-tunnel | DNS attempt: deleted Vercel A record, added CNAME — Vercel accepted
+2026-04-29 | cloudflare-tunnel | DNS attempt failed: igarden.sa not selectable in Cloudflare Public Hostname dropdown (nameservers on Vercel)
+2026-04-29 | cloudflare-tunnel | Decision deferred: keep trycloudflare temp, plan permanent later
 2026-04-29 | cloudflare-tunnel | DNS pending: igarden.sa is on Vercel nameservers (not Cloudflare)
 ```
 
@@ -145,10 +206,23 @@
 
 ```
 2026-04-29 | mobile-sync | rclone installed on phone via Termux
-2026-04-29 | mobile-sync | gdrive remote configured
-2026-04-29 | mobile-sync | ~/sync-kb.sh deployed (git pull + rclone sync)
-2026-04-29 | mobile-sync | cron job set: daily at 22:00
+2026-04-29 | mobile-sync | gdrive remote configured (OAuth via browser, token pasted manually)
+2026-04-29 | mobile-sync | rclone verified: visible folders Master Doc Archive, محطة عسفان, etc.
+2026-04-29 | mobile-sync | ~/sync-kb.sh deployed (git pull + rclone sync gdrive:iGarden-KB)
+2026-04-29 | mobile-sync | cron job set via cronie: daily at 22:00 with sync.log
 2026-04-29 | mobile-sync | Termux output issue resolved via reinstall
+```
+
+### termux
+
+```
+2026-04-29 | termux | git, gh, unzip installed (Android workstation when laptop unavailable)
+2026-04-29 | termux | Issue: cat/echo silent output — diagnosed as storage permissions
+2026-04-29 | termux | Fix: termux-setup-storage + full reinstall
+2026-04-29 | termux | rclone installed (with warning, but functional)
+2026-04-29 | termux | cronie installed for daily sync automation
+2026-04-29 | termux | KB zip path discovered: /storage/emulated/0/Download/igarden_kb_v1/igarden_kb/
+2026-04-29 | termux | Failed approach: ssh-dss to legacy device (192.168.8.172) — algorithm not supported
 ```
 
 ---
