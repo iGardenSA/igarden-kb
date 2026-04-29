@@ -327,7 +327,95 @@
 ```
 2026-04-28 | brand | Unified typography rule adopted: Tajawal for everything (replaces Tajawal+Poppins mix)
 2026-04-29 | brand | Brand Messaging v1.1 declared mandatory reference for all content across platforms
+2026-04-28 | brand | Slide background: light F4F7F4 default (cover stays dark) — partially overridden in implementation
 ```
+
+### igarden-company
+
+```
+????-??-?? | igarden-company | SAIP industrial design #423450193 registered (under Ali M. Ghanima)
+????-??-?? | igarden-company | MISA investment license #24926249716 obtained (active)
+????-??-?? | igarden-company | Osfan R&D Station established (Ghulah, north Jeddah)
+????-??-?? | igarden-company | 500K+ SAR cumulative revenue achieved
+????-??-?? | igarden-company | 1,000+ active customers across multiple Saudi regions (definition pending)
+2025-??-?? | igarden-company | Agrofood 2025 Jeddah — official presence
+```
+
+### igarden-tower
+
+```
+????-??-?? | igarden-tower | Aeroponics system designed locally — tolerates +45°C
+????-??-?? | igarden-tower | Water savings: 95% vs traditional farming (was previously documented as 60% — superseded)
+????-??-?? | igarden-tower | Productivity: 3× per square meter
+????-??-?? | igarden-tower | Lifespan: 3× imported alternatives
+```
+
+### igarden-smart-os
+
+```
+2025-??-?? | igarden-smart-os | Live in Osfan station — production system
+2025-??-?? | igarden-smart-os | 208 unit tests passing (FastAPI Native)
+2025-H1   | igarden-smart-os | First Saudi plant database — 38 plant disease classes
+????-??-?? | igarden-smart-os | Architecture: 70% local (PDPL) + 30% cloud — hybrid
+????-??-?? | igarden-smart-os | Stack: FastAPI + PostgreSQL 16 + MQTT Mosquitto + Redis + Docker
+????-??-?? | igarden-smart-os | Decision Router for local-vs-cloud workload routing
+????-??-?? | igarden-smart-os | Vision Hub: YOLOv8 on Hailo-8L (38 disease classes)
+????-??-?? | igarden-smart-os | Sensor metrics: pH ±0.1, EC ±2%, TDS ±10ppm, temp, humidity, tank
+????-??-?? | igarden-smart-os | API: GET /sensors/realtime, POST /control/{device_id}, GET /alerts
+```
+
+### igarden-market
+
+```
+????-??-?? | igarden-market | TAM: 45+ billion SAR (Saudi agriculture sector total)
+????-??-?? | igarden-market | SAM: 4.2 billion SAR (AgriTech for SMB farms) — RESOLVES deck conflict (deck-2.5B was wrong)
+????-??-?? | igarden-market | SOM: 50 million SAR (5% of SAM, 2026-2028) — RESOLVES deck conflict (deck-125M was wrong)
+????-??-?? | igarden-market | CAGR: 8-10% annual
+```
+
+### igarden-financials
+
+```
+????-??-?? | igarden-financials | LTV:CAC ratio = 11.8×
+????-??-?? | igarden-financials | SaaS gross margin: 80%+
+????-??-?? | igarden-financials | Forecast: 2.4M (2026) / 6.9M (2027) / 12.5M (2028) SAR
+????-??-?? | igarden-financials | Break-even projected: Q2 2027
+```
+
+### osfan-station
+
+```
+????-??-?? | osfan-station | R&D station established (Ghulah, north Jeddah)
+2025-H1   | osfan-station | 5 field workshops conducted
+2025-??-?? | osfan-station | Hosting Smart OS as live production system
+```
+
+### pitch-2025
+
+```
+2025-12-?? | pitch-2025 | First pitch version prepared for Sunbolah accelerator
+```
+
+### pitch-deck
+
+```
+2026-04-26 | pitch-deck | igarden_sunbolah_2026_pitch.pptx — first version uploaded for review
+2026-04-28 | pitch-deck | Redesigned version uploaded — score 8.4/10
+2026-04-28 | pitch-deck | Final structure SUPERSEDES 12-slide (locked 2026-04-28): now 13 slides with Competitive added
+2026-04-28 | pitch-deck | 16-slide proposal REJECTED (redundant for accelerator pitch)
+2026-04-28 | pitch-deck | 14-slide external proposal REJECTED (closer to company overview, not pitch)
+2026-04-28 | pitch-deck | 11-slide structure REJECTED (no Competitive + Traction not split)
+2026-04-28 | pitch-deck | Slide structure decision: Competitive Analysis added between Market and Business Model
+2026-04-28 | pitch-deck | Slide 02 changed: "Why Now / Vision 2030 + MEWA" replaces "About Us / Bio" (Sunbolah is MEWA-affiliated)
+2026-04-28 | pitch-deck | Slide 12: Roadmap + Ask MERGED into one slide (time pressure + avoid duplication)
+2026-04-28 | pitch-deck | Differentiator: "AI as 4th team member" added (vs other pitch teams)
+2026-04-28 | pitch-deck | Philosophy slide repositioned: 02 → 04 Solution (logical sequence)
+2026-04-28 | pitch-deck | Sidebar (left vertical strip) REMOVED from approved template
+2026-04-28 | pitch-deck | Final filename: igarden_sunbolah_2026_redesigned_20260428063310.pptx — score 8.4/10
+2026-04-28 | pitch-deck | Full 13-slide content text approved
+2026-04-29 | pitch-deck | Page-by-page design review prompt completed
+```
+
 
 
 ---
