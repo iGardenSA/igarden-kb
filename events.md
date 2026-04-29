@@ -22,7 +22,9 @@
 ### company
 
 ```
-2026-04-27 | company | Tagline finalized: "ازرع بذكاء"
+2026-04-26 | company | Tagline issued in Tech Appendix v3.0: "نَبني · نُوطّن · نُطوّر — Plant Smart"
+2026-04-27 | company | Tagline changed to "زراعة بلا تخمين" — Brand Messaging Supplement v1.0 (supersedes 2026-04-26)
+2026-04-27 | company | Tagline finalized: "ازرع بذكاء" (supersedes "زراعة بلا تخمين" same day)
 2026-04-27 | company | Long signature locked: "حين تزرع بذكاء، تحصد بثقة"
 ```
 
@@ -74,6 +76,9 @@
 2026-04-29 | kb | .gitignore added (excludes secrets.md, .env, *.key, SSH keys, rclone configs)
 2026-04-29 | kb | tasks/clarifications-needed.md created (open questions log)
 2026-04-29 | kb | projects/cloudflare-tunnel.md created
+2026-04-29 | kb | brand/tagline-evolution.md created
+2026-04-27 | kb | Strategy: GitHub repo as Single Source of Truth (supersedes "Project Knowledge only")
+2026-04-27 | kb | Architecture-strategy: "iGarden = combination of right systems" supersedes "iGarden = full custom platform"
 ```
 
 ### secrets-incident
@@ -96,6 +101,12 @@
 2026-04-29 | secrets-leak-warning | ESPHome api_encryption_key + ota_password published in pi5-customer2-ghulah.md (public repo) — ROTATE
 2026-04-29 | secrets-leak-warning | Telegram bot token + ESPHome keys REDACTED in current files (commit f26c050) — note: secrets remain in git history
 2026-04-29 | secrets-leak-warning | Anthropic API key (igarden-telegram-bot) exposed in chat report — [REDACTED — see password manager] — ROTATE IMMEDIATELY
+2026-04-29 | secrets-leak-warning | PostgreSQL password (CM5) exposed in chat report — [REDACTED] — ROTATE
+2026-04-29 | secrets-leak-warning | Mosquitto password (igarden-sensors) exposed in chat report — [REDACTED] — ROTATE
+2026-04-29 | secrets-leak-warning | n8n Basic Auth password exposed in chat report — [REDACTED] — ROTATE
+2026-04-29 | secrets-leak-warning | n8n Encryption Key exposed in chat report — [REDACTED] — DO NOT ROTATE without re-encrypting credentials first
+2026-04-29 | secrets-leak-warning | ESP32 AP fallback password exposed in chat report — [REDACTED] — ROTATE
+2026-04-29 | secrets-leak-warning | Customer-003 IBAN + tax ID + customer name exposed in chat report — moved to ~/igarden-secrets/
 ```
 
 ### github-repo
@@ -110,11 +121,21 @@
 ### website
 
 ```
+2026-04-27 | website | Smart OS Demo built — 1196 lines React, 4 tabs, 12 crops × 4 zones
+2026-04-27 | website | iGardenSA/igarden-demo public repo created
+2026-04-27 | website | Vercel project created: igarden-demo (org: i-garden-sa, region: fra1)
+2026-04-27 | website | commit 7670aac — replaced HTML Static with Next.js 16
+2026-04-27 | website | 5 Vercel deployments failed (Framework Preset old, Next 15 mismatch)
+2026-04-27 | website | commit cd40a50 — fixed 5 build errors (syntax + types + Next 15→16)
+2026-04-27 | website | Stack final: Next.js 16.2.4 + React 19 + TypeScript 5 + Recharts 2.15 + lucide-react 0.468
+2026-04-27 | website | tsconfig: jsx="react-jsx" (supersedes "preserve" — Next 16 compat)
 2026-04-27 | website | demo.igarden.sa deployed on Vercel (Next.js 16.2.4, fra1)
 2026-04-27 | website | Header tagline removed
-2026-04-27 | website | Green header icon removed
-2026-04-27 | website | sessionStorage adopted (replaced localStorage in demo)
+2026-04-27 | website | commit 1b7a9e5 — Logo green icon (supersedes white) + tagline removed from Header
+2026-04-27 | website | commit c28115e — sessionStorage adopted (replaced localStorage in demo)
+2026-04-27 | website | One-Liner card removed from Footer
 2026-04-27 | website | Subdomain policy adopted: demo / app / shop separated
+2026-04-27 | website | Bundle size: ~140KB (with logos)
 ```
 
 ### customer-001
@@ -127,6 +148,21 @@
 ### customer-002
 
 ```
+2026-04-?? | customer-002 | Pi 5 historical IP: 192.168.8.126 (oldest known, pre-HAOS)
+2026-04-?? | customer-002 | Pi 5 IP: 192.168.8.132 (HAOS era, pre-2026-04-22)
+2026-04-22 | customer-002 | Pi 5 migrated HAOS → Pi OS Lite + Docker + HA Container; IP changed .132 → .209
+2026-04-22 | customer-002 | sudo NOPASSWD enabled; UFW + Fail2ban + SSH key-only authentication
+2026-04-22 | customer-002 | Daily backups in ~/backups/ (first snapshot 69MB)
+2026-04-22 | customer-002 | First HA Dashboard "iGarden" (Arabic) deployed
+2026-04-22 | customer-002 | ESP32 igarden-tank: API encryption + OTA password [REDACTED — see password manager]
+2026-04-22 | customer-002 | ESP32 AP fallback SSID: Igarden-Tank Fallback — password [REDACTED — see password manager]
+2026-04-22 | customer-002 | ESP32 GPIO mapping — SDA=21, SCL=22, 1-Wire=4 (DS18B20 + 4.7kΩ pullup), UART RX=16/TX=17
+2026-04-22 | customer-002 | ESP32 Relays — 27=Pump1, 14=Pump2, 12=Mixer, 13=Valve, 5=DoserA, 25=DoserB, 26=DoserC, 2=pH-Down
+2026-04-22 | customer-002 | ESP32 ADS1115 @ 0x48 — A0=pH, A1-A3 reserved
+2026-04-22 | customer-002 | ESP32 pH equation (current, needs calibration): (x * 3.5) + 0.0
+2026-04-22 | customer-002 | ESP32 MQTT topic prefix: igarden/tank, user: mqtt_user
+2026-04-24 | customer-002 | Chromium Kiosk installed on DSI screen (working)
+2026-04-24 | customer-002 | Touch screen + USB devices not detected (Wayland/cage limitation)
 2026-04-?? | customer-002 | Pi 5 IP changed: .209 → .132
 2026-04-?? | customer-002 | Pi 5 IP changed: .132 → .235 (current via DHCP reservation)
 2026-04-27 | customer-002 | Progress reported: 80% — pH cal, TDS UART, screen, SD pending
@@ -138,10 +174,14 @@
 ### customer-003
 
 ```
-2026-04-13 | customer-003 | Original contract signed (1 hall, 2 arches, 62,100 SAR after VAT)
-2026-04-?? | customer-003 | Devices ordered (in transit)
+2026-04-13 | customer-003 | Original contract signed (1 hall, 2 arches) — financial details + customer PII in ~/igarden-secrets/contracts/ahsa-rayana-2026-04-13.md (NOT in this repo)
+2026-04-13 | customer-003 | Tech specs (original): 2 connected arches 18×35m, 1400 Dutch buckets (700/arch), 4× 500L tanks, 12 doser pumps (3/tank), 1× 7" master + 3× sub controllers
+2026-04-13 | customer-003 | Warranty (original): system 24mo, control 12mo, maintenance 60d
+2026-04-13 | customer-003 | Customer notified about possible delivery delay (devices needed extra lead time)
+2026-04-?? | customer-003 | Devices ordered (in transit, ETA ~2026-05-04)
+2026-04-27 | customer-003 | Team assigned: Ali + osfan technical team
 2026-04-27 | customer-003 | Architecture decided: HA Container on Pi 5 (4× ESP32 zones)
-2026-04-29 | customer-003 | Contract doubled: 1 hall → 2 halls (needs Opus 4.7 review)
+2026-04-29 | customer-003 | Contract doubled: 1 hall → 2 halls (needs Opus 4.7 review — full doubled-contract details in ~/igarden-secrets/)
 ```
 
 ### pi5-ghulah
@@ -167,6 +207,19 @@
 ### cm5
 
 ```
+2026-04-22 | cm5 | Initial setup completed — Hub: n8n + PostgreSQL/TimescaleDB + Portainer + Mosquitto-systemd
+2026-04-22 | cm5 | Decision: Mosquitto runs as systemd service (NOT Docker container)
+2026-04-22 | cm5 | PostgreSQL DB: igarden_data (image: timescale/timescaledb:latest-pg16)
+2026-04-22 | cm5 | Mosquitto ports: 127.0.0.1:1883 (local) + 0.0.0.0:1884 (LAN)
+2026-04-22 | cm5 | Docker network postgres_default (links igarden-postgres + n8n)
+2026-04-22 | cm5 | Docker bridge IP: 172.17.0.1 (used by n8n MQTT credential)
+2026-04-22 | cm5 | n8n credential: PostgreSQL host=igarden-postgres (container name, NOT host.docker.internal)
+2026-04-22 | cm5 | Mosquitto user: igarden-sensors — password [REDACTED — see password manager]
+2026-04-22 | cm5 | PostgreSQL user: igarden — password [REDACTED — see password manager]
+2026-04-22 | cm5 | n8n Basic Auth user: igarden — password [REDACTED — see password manager]
+2026-04-22 | cm5 | n8n Encryption Key: [REDACTED — see password manager] (do not rotate without re-encrypting credentials)
+2026-04-22 | cm5 | Portainer admin: igarden-admin — password [REDACTED — see password manager], port 127.0.0.1:9000
+2026-04-22 | cm5 | n8n container port: 0.0.0.0:5678 → 5678
 2026-04-27 | cm5 | Initial IP: 192.168.8.21 (user: igarden, hostname: igarden-hub)
 2026-04-27 | cm5 | Stack: Docker (n8n + PostgreSQL/TimescaleDB + Portainer) + Mosquitto-systemd
 2026-04-27 | cm5 | n8n owner: info@igarden.sa, Portainer admin: igarden-admin
@@ -223,8 +276,31 @@
 ### anthropic-api
 
 ```
+2026-04-27 | anthropic-api | Balance snapshot: $24.00 of $28.75 original credit
 2026-04-29 | anthropic-api | New API key created: name "igarden-telegram-bot", workspace Default
 2026-04-29 | anthropic-api | Key stored in n8n HTTP node only (NOT in this repo)
+```
+
+### vercel-account
+
+```
+2026-04-27 | vercel-account | Pro Trial active — 9 days remaining (deadline 2026-05-07)
+2026-04-27 | vercel-account | Org: i-garden-sa
+2026-04-27 | vercel-account | Hosts: igarden-demo (demo.igarden.sa), main site (igarden.sa)
+```
+
+### wifi
+
+```
+2026-04-22 | wifi | Osfan station SSID: IGARDEN_EXT — password [REDACTED — see password manager]
+```
+
+### contract-ahsa
+
+```
+2026-04-13 | contract-ahsa | Signed — full PDF + financial details in ~/igarden-secrets/contracts/ahsa-rayana-2026-04-13.md
+2026-04-13 | contract-ahsa | Customer name + tax ID + IBAN [REDACTED — see ~/igarden-secrets/]
+2026-04-27 | contract-ahsa | Doubled (1 hall → 2 halls) — pending Opus 4.7 re-analysis
 ```
 
 ### cloudflare-tunnel
