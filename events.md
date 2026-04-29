@@ -485,6 +485,9 @@
 ????-??-?? | igarden-company | 500K+ SAR cumulative revenue achieved
 ????-??-?? | igarden-company | 1,000+ active customers across multiple Saudi regions (definition pending)
 2025-??-?? | igarden-company | Agrofood 2025 Jeddah — official presence
+2026-04-26 | igarden-company | Partner name correction: "م. أيمن حسين المخزوم" (NOT "المخزومي") per MISA license #1490123 — mandatory across all docs
+2026-04-26 | igarden-company | Equity split confirmed: Ali 50% / Ayman 25% / Mohammed Al-Kuthayri 25%
+2026-04-26 | igarden-company | Trademark "iGarden" + "الحديقة الذكية" + Tagline NOT yet registered in SAIP — flagged P0 legal risk
 ```
 
 ### igarden-tower
@@ -526,6 +529,24 @@
 ????-??-?? | igarden-financials | SaaS gross margin: 80%+
 ????-??-?? | igarden-financials | Forecast: 2.4M (2026) / 6.9M (2027) / 12.5M (2028) SAR
 ????-??-?? | igarden-financials | Break-even projected: Q2 2027
+2026-04-26 | igarden-financials | CEO directive: 2026 = "low profitability" framing (NOT loss) — pending Saeed accountant verification
+2026-04-26 | igarden-financials | Sunbolah grant (150K SAR) classified as "potential, NOT guaranteed" — excluded from baseline budget
+2026-04-26 | igarden-financials | Sunbolah grant allocation plan (if approved): Smart Controllers 75K / Osfan 37.5K / Marketing 22.5K / Legal 15K
+2026-04-26 | igarden-financials | Subscriptions estimate: ~$130/month (~490 SAR) — detailed file pending
+2026-04-26 | igarden-financials | Hardware total spend: ~10,000 SAR (CM5 ~3,029 + Pi5 ~600 + AI HAT+ ~700 + IMX500 ~519 + accessories)
+2026-04-26 | igarden-financials | Forecast conflict flagged: Master v1.4 = 17.3M cumulative vs Pitch v2.3 = 21.8M — UNRESOLVED until Saeed session
+2026-04-26 | igarden-financials | Hardware regional pricing risk noted: 50-100% potential increase due to geopolitical conditions
+```
+
+### vision-hub
+
+```
+2026-04-26 | vision-hub | ADR T010 adopted: Pi 5 + AI HAT+ + IMX500 = separate architectural zone (NOT Garden Hub)
+2026-04-26 | vision-hub | Hardware: Pi 5 (8GB) + AI HAT+ (Hailo-8L 13 TOPS) + Sony IMX500 AI Camera
+2026-04-26 | vision-hub | Performance benchmarks: YOLOv8s 30+ FPS, YOLOv8n 60+ FPS on Hailo
+2026-04-26 | vision-hub | Plant disease detection: PlantVillage dataset — 14 plants × 38 disease classes, 94%+ accuracy
+2026-04-26 | vision-hub | Track A demo strategy: pre-recorded video (not live) for Sunbolah pitch — avoids hardware setup risk
+2026-04-26 | vision-hub | Expected hardware arrival: CM5 by 1-4 May, IMX500 by 1-8 May
 ```
 
 ### osfan-station
