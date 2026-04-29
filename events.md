@@ -76,6 +76,19 @@
 2026-04-29 | kb | projects/cloudflare-tunnel.md created
 ```
 
+### secrets-incident
+
+```
+2026-04-28 21:27 | secrets-incident | ESPHome api_encryption_key + ota_password committed in customers/002-ghulah-lettuce.md (commit 3b07449, from initial KB ZIP)
+2026-04-29 04:11 | secrets-incident | Telegram bot token committed in SESSIONS.md + conversations/2026-04-29/full-session-report.md (commit 5004a08)
+2026-04-29 ?? | secrets-incident | Repo visibility changed to public (gh repo edit) — leak now world-readable
+2026-04-29 12:27 | secrets-incident | ESPHome keys re-committed in infrastructure/pi5-customer2-ghulah.md (commit 907fb07)
+2026-04-29 13:21 | secrets-incident | Leak disclosed during session; redaction applied to working tree only (commit f26c050) — git history STILL contains secrets
+2026-04-29 | secrets-incident | Anthropic API key 'igarden-telegram-bot' name (not value) mentioned in chat reports
+2026-04-29 | secrets-incident | Rotation status: PENDING — user deferred to "tomorrow"; no keys revoked yet
+2026-04-29 | secrets-incident | Tools missing on host: git-filter-repo + bfg unavailable — full history scrub deferred
+```
+
 ### secrets-leak-warning
 
 ```
