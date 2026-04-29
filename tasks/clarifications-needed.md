@@ -98,6 +98,57 @@
 
 ---
 
+## 8️⃣ هل n8n كان شغّالاً قبل 2026-04-29؟
+
+**الملاحظة:** سجلّ `cloudflared` أشار إلى أنّ container الأصلي شغّال منذ "6 days ago".
+
+**السؤال:**
+- هل n8n كان شغّالاً منذ ~2026-04-23 ولم يُوثَّق؟
+- أم أنّ الـ container الأصلي كان شيئاً آخر؟
+
+**ما يحلّ المشكلة:** `docker history` على CM5 + مراجعة logs.
+
+---
+
+## 9️⃣ ما الغرض من `portainer-ce` على CM5؟
+
+**الملاحظة:** Container شغّال على port 9000.
+
+**السؤال:**
+- هل مستخدَم فعلياً (إدارة Docker عبر UI)؟
+- أم مجرد إرث من setup قديم لم يُحذف؟
+- إذا مستخدم: من له صلاحيات admin؟ (events.md يذكر admin user `igarden-admin`)
+
+**ما يحلّ المشكلة:** قرار صريح — استخدام أم حذف.
+
+---
+
+## 🔟 ما الغرض من `timescaledb` container على CM5؟
+
+**الملاحظة:** Container شغّال (يُسمّى `igarden-postgres` في events.md).
+
+**السؤال:**
+- لأي مشروع؟ FastAPI Native (pause)؟ n8n logs؟ sensor pipeline مستقبلي؟
+- ما schema الـ DB حالياً؟ هل فيه بيانات فعلية أم فارغ؟
+- هل MQTT → n8n → PostgreSQL workflow اكتمل؟
+
+**ما يحلّ المشكلة:** `docker exec igarden-postgres psql -l` + مراجعة n8n workflows.
+
+---
+
+## 1️⃣1️⃣ تواجد `homeassistant` container على CM5
+
+**الملاحظة:** Container HA شغّال على CM5، لكن Stack الموثَّق يضع HA على Pi 5 (customer-002) وعلى Pi 5 (customer-001).
+
+**السؤال:**
+- ما الغرض من instance HA على CM5؟
+- هل development/testing? نسخة احتياطية؟ تجارب dashboards؟
+- ما علاقته بـ HA على Pi 5 الميداني؟
+
+**ما يحلّ المشكلة:** قرار + توثيق صريح في `infrastructure/cm5-hub.md`.
+
+---
+
 ## 📝 الـ Workflow
 
 عند الإجابة على أيّ سؤال:

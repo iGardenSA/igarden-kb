@@ -51,6 +51,10 @@
 2026-04-29 | kb | infrastructure/cm5-osfan-hub.md renamed to cm5-hub.md
 2026-04-29 | kb | SESSIONS.md rewritten as comprehensive session log
 2026-04-29 | kb | README.md restructured with current-state snapshot + Event-Sourced workflow
+2026-04-29 | kb | SECRETS.md.example template created (secret management policy)
+2026-04-29 | kb | .gitignore added (excludes secrets.md, .env, *.key, SSH keys, rclone configs)
+2026-04-29 | kb | tasks/clarifications-needed.md created (open questions log)
+2026-04-29 | kb | projects/cloudflare-tunnel.md created
 ```
 
 ### secrets-leak-warning
@@ -58,6 +62,8 @@
 ```
 2026-04-29 | secrets-leak-warning | Telegram bot token published in SESSIONS.md (public repo) — ROTATE
 2026-04-29 | secrets-leak-warning | ESPHome api_encryption_key + ota_password published in pi5-customer2-ghulah.md (public repo) — ROTATE
+2026-04-29 | secrets-leak-warning | Telegram bot token + ESPHome keys REDACTED in current files (commit f26c050) — note: secrets remain in git history
+2026-04-29 | secrets-leak-warning | Anthropic API key (igarden-telegram-bot) exposed in chat report — [REDACTED — see password manager] — ROTATE IMMEDIATELY
 ```
 
 ### github-repo
@@ -200,6 +206,14 @@
 2026-04-29 | cloudflare-tunnel | DNS attempt failed: igarden.sa not selectable in Cloudflare Public Hostname dropdown (nameservers on Vercel)
 2026-04-29 | cloudflare-tunnel | Decision deferred: keep trycloudflare temp, plan permanent later
 2026-04-29 | cloudflare-tunnel | DNS pending: igarden.sa is on Vercel nameservers (not Cloudflare)
+```
+
+### dns-vercel
+
+```
+2026-04-29 | dns-vercel | n8n A record removed from Vercel DNS
+2026-04-29 | dns-vercel | CNAME added pointing to *.cfargotunnel.com (accepted by Vercel)
+2026-04-29 | dns-vercel | Reverted: igarden.sa nameservers stayed on Vercel; trycloudflare retained as temp solution
 ```
 
 ### mobile-sync
