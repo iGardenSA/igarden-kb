@@ -26,6 +26,25 @@
 2026-04-27 | company | Long signature locked: "حين تزرع بذكاء، تحصد بثقة"
 ```
 
+### brand-messaging
+
+```
+2026-04-26 | brand-messaging | Master v2.0 §2.3: "نَبني · نُوطّن · نُطوّر" listed as official Tagline
+2026-04-26 | brand-messaging | Master v2.0 §2.3: "ازرع بذكاء" listed as secondary/emotional Tagline
+2026-04-27 | brand-messaging | Brand Tagline confirmed: "ازرع بذكاء" — for logo, business cards, bio (supersedes "ثانوي" status)
+2026-04-27 | brand-messaging | Hero Headline confirmed: "زراعة بلا تخمين" — for website hero + Sunbolah solution slide
+2026-04-27 | brand-messaging | Role distinction codified: Brand Tagline ≠ Hero Headline (different funnel stages)
+2026-04-27 | brand-messaging | "نَبني · نُوطّن · نُطوّر" reclassified as operational methodology — NOT a marketing Tagline (supersedes Master v2.0 §2.3)
+2026-04-27 | brand-messaging | One-Liner adopted: "iGarden — النظام المتكامل الأول للزراعة الذكية في السعودية"
+2026-04-27 | brand-messaging | Official Bio (3 lines) adopted
+2026-04-27 | brand-messaging | Signature Line confirmed: "حين تزرع بذكاء، تحصد بثقة"
+2026-04-27 | brand-messaging | Hierarchy: Brand Tagline → Hero Headline → One-Liner → Bio → Signature
+2026-04-27 | brand-messaging | iGarden_Brand_Messaging_v1_0.docx ⚠️ superseded by v1_1 (same day)
+2026-04-27 | brand-messaging | iGarden_Brand_Messaging_v1_1.docx adopted (6 sections, 124 paragraphs, RTL, iGarden colors)
+2026-04-27 | brand-messaging | LinkedIn 2 posts drafted: visionary tone + founder tone (founder tone preferred for personal account)
+2026-04-27 | brand-messaging | Master v2.0 §1.2 + §2.3 flagged for update in v2.1 (replace "نَبني · نُوطّن · نُطوّر" Tagline references)
+```
+
 ### claude-models
 
 ```
