@@ -8,6 +8,30 @@
 
 ## 🔴 P0 — حرج (يوقف الإنتاج أو الميدان)
 
+### `secrets-leak-warning` — تدوير الـ tokens المسرَّبة 🚨 **فوراً**
+
+> ⚠️ هذه المهمة لا تنتظر — الـ tokens مكشوفة الآن (في تقارير محادثات + git history سابقة).
+
+- [ ] **Anthropic API key (`igarden-telegram-bot`)** — مكشوف في تقرير محادثة 2026-04-29
+  - Anthropic Console → Settings → API Keys → revoke
+  - أنشئ مفتاحاً جديداً
+  - حدّث n8n HTTP node credentials
+  - سجّل: `2026-04-?? | anthropic-api | key rotated [REDACTED]` في events.md
+- [ ] **Telegram Bot Token (`@igarden_sa_bot`)** — مكشوف في تقرير محادثة + git history
+  - BotFather → `/revoke`
+  - أعِد إصدار token جديد
+  - حدّث n8n Telegram credentials
+  - أعِد setWebhook
+  - سجّل: `2026-04-?? | telegram-bot | token rotated [REDACTED]` في events.md
+- [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history
+  - `openssl rand -base64 32` لـ api key الجديد
+  - `openssl rand -hex 16` لـ ota password الجديد
+  - حدّث `secrets.yaml` على Pi 5 العميل 002
+  - re-flash ESP32 بـ encryption key الجديد
+  - سجّل: `2026-04-?? | esp32-tank | api_encryption_key + ota_password rotated [REDACTED]`
+
+> 📌 بعد التدوير: حدّث `SECRETS.md.example` إذا تغيّرت سياسة، وقدّر الحاجة لـ `git filter-repo` لمسح history.
+
 ### `customer-002` — إكمال الغولاء قبل الذهاب للأحساء
 - [ ] **معايرة pH** بمحاليل قياسية 4.0 + 7.0
 - [ ] **حل قراءة TDS UART** (BA.012 protocol غير محسوم)
@@ -107,7 +131,7 @@
 
 | الأولوية | عدد المهام | المسؤول الافتراضي |
 |---|---|---|
-| 🔴 P0 | 9 | علي |
+| 🔴 P0 | 12 | علي |
 | 🟡 P1 | 8 | علي + أيمن |
 | 🟢 P2 | 11 | الفريق |
 | 🔵 P3 | 6 | لاحقاً |

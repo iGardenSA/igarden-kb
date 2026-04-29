@@ -18,7 +18,7 @@
 | Claude Code v2.1.121 على CM5 | ✅ | [`infrastructure/cm5-hub.md`](./infrastructure/cm5-hub.md) |
 | n8n على CM5 (`192.168.8.102:5678`) | ✅ | [`infrastructure/cm5-hub.md`](./infrastructure/cm5-hub.md) |
 | Telegram Bot `@igarden_sa_bot` | ✅ شغّال | [`projects/telegram-bot.md`](./projects/telegram-bot.md) |
-| Cloudflare Tunnel `iGarden-cm5` | 🟡 Healthy لكن DNS معلّق | [`tasks/pending.md`](./tasks/pending.md) |
+| Cloudflare Tunnel `iGarden-cm5` | 🟡 Healthy لكن DNS معلّق | [`projects/cloudflare-tunnel.md`](./projects/cloudflare-tunnel.md) |
 | Event-Sourced KB (`events.md`) | ✅ معتمد كـ Source of Truth | [`events.md`](./events.md) |
 | العميل 002 (الغولاء) | 🟡 80% | [`customers/002-ghulah-lettuce.md`](./customers/002-ghulah-lettuce.md) |
 | العميل 003 (الأحساء) — عقد مضاعف | 🚨 ينتظر تحليل Opus 4.7 | [`customers/003-ahsa-rayana.md`](./customers/003-ahsa-rayana.md) |
@@ -63,7 +63,8 @@ igarden-kb/
 │   └── deployment-checklist.md
 │
 ├── projects/                    ← مشاريع جانبية
-│   └── telegram-bot.md
+│   ├── telegram-bot.md
+│   └── cloudflare-tunnel.md
 │
 ├── tasks/                       ← المهام المؤجَّلة
 │   └── pending.md
