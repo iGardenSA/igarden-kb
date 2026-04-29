@@ -133,6 +133,7 @@
 2026-04-27 | website | Header tagline removed
 2026-04-27 | website | commit 1b7a9e5 — Logo green icon (supersedes white) + tagline removed from Header
 2026-04-27 | website | commit c28115e — sessionStorage adopted (replaced localStorage in demo)
+2026-04-30 | website | igarden.sa main site deployed on Production — verified live
 2026-04-27 | website | One-Liner card removed from Footer
 2026-04-27 | website | Subdomain policy adopted: demo / app / shop separated
 2026-04-27 | website | Bundle size: ~140KB (with logos)
@@ -256,6 +257,8 @@
 2026-04-29 | n8n | Second trycloudflare URL: https://picking-precise-powder-blades.trycloudflare.com
 2026-04-29 | n8n | Webhook URL temporary via trycloudflare (changes on restart)
 2026-04-29 | n8n | Telegram → Claude API → Reply workflow active (3 nodes)
+2026-04-30 | n8n | Webhook stable: n8n.igarden.work → garden-hub:5678 (no more trycloudflare URL changes)
+2026-04-30 | n8n | iGarden Telegram Bot @igarden_sa_bot fully operational
 ```
 
 ### telegram-bot
@@ -314,6 +317,8 @@
 2026-04-29 | cloudflare-tunnel | DNS attempt failed: igarden.sa not selectable in Cloudflare Public Hostname dropdown (nameservers on Vercel)
 2026-04-29 | cloudflare-tunnel | Decision deferred: keep trycloudflare temp, plan permanent later
 2026-04-29 | cloudflare-tunnel | DNS pending: igarden.sa is on Vercel nameservers (not Cloudflare)
+2026-04-30 | cloudflare-tunnel | Permanent tunnel achieved via igarden.work domain (Cloudflare-native DNS) — supersedes trycloudflare temp solution
+2026-04-30 | cloudflare-tunnel | cloudflared running as systemd service on igarden-hub (not Docker container) — more reliable
 ```
 
 ### dns-vercel
@@ -355,7 +360,19 @@
 2026-04-29 | tailnet | Hostname for laptop in Tailnet set: hp-elitebook
 2026-04-29 | tailnet | Setup order locked: laptop → Note 22 → CM5 → Pi 5
 2026-04-29 | tailnet | Shared layer composition adopted: Notion + Drive + GitHub + Tailscale + Claude Projects
+2026-04-30 | tailnet | Tailnet operational: hp-elitebook + igarden-hub + s24-ultra connected
+2026-04-30 | tailnet | SSH verified working over Tailnet: hp-elitebook ↔ igarden-hub
 ```
+
+### igarden-work
+
+```
+2026-04-30 | igarden-work | Domain igarden.work registered on Cloudflare — $8.20/year
+2026-04-30 | igarden-work | DNS managed natively on Cloudflare (NOT Vercel — solves the DNS conflict for igarden.sa)
+2026-04-30 | igarden-work | n8n.igarden.work → garden-hub:5678 — accessible from internet
+2026-04-30 | igarden-work | api.igarden.work → garden-hub:8000 — ready (FastAPI Native eventual host)
+```
+
 
 ### founder
 

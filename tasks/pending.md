@@ -142,16 +142,12 @@
 
 ## 🟡 P1 — مهم (يحسّن الموثوقية أو السرعة)
 
-### `cloudflare-tunnel` / `dns` — حل دائم لـ webhook
-- [ ] **سكربت auto-update لـ webhook URL** عند كل restart cloudflared
-  - يقرأ URL الجديد من logs
-  - يحدّث `WEBHOOK_URL` في n8n
-  - يعيد setWebhook لـ Telegram
-- [ ] **DNS دائم** لـ `n8n.igarden.sa`
-  - الخيارات:
-    1. نقل nameservers من Vercel إلى Cloudflare (يكسر الموقع مؤقتاً)
-    2. subdomain على `pages.dev` كحل وسط
-    3. الإبقاء على trycloudflare + سكربت auto-update
+### ~~`cloudflare-tunnel` / `dns`~~ ✅ محلول 2026-04-30
+
+> **الحل المعتمد:** شراء domain جديد `igarden.work` ($8.20/سنة) على Cloudflare native DNS — تجنّب الحاجة لنقل nameservers `igarden.sa` من Vercel.
+> - `n8n.igarden.work` → `garden-hub:5678` (webhook ثابت)
+> - `api.igarden.work` → `garden-hub:8000` (للـ FastAPI لاحقاً)
+> - cloudflared الآن systemd service (ليس Docker)
 
 ### `n8n` — إكمال البنية
 - [ ] **MQTT credential** في n8n (يحرّر workflow Sensor Simulator)
