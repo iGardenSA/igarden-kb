@@ -41,6 +41,7 @@
 ## 📁 خريطة الملفات
 
 ### 🧠 Core
+- [`events.md`](./events.md) — **🔥 Source of Truth** — سجل أحداث مرتّب زمنياً (آخر سطر = الحقيقة الحالية)
 - [`README.md`](./README.md) — كيف تستخدم الـ KB
 - [`SESSIONS.md`](./SESSIONS.md) — سجل جلسات سريع
 - [`INDEX.md`](./INDEX.md) — هذا الملف
