@@ -258,6 +258,65 @@
 2026-04-29 | termux | Failed approach: ssh-dss to legacy device (192.168.8.172) — algorithm not supported
 ```
 
+### pitch-deck
+
+```
+2026-04-27 | pitch-deck | Original 12-slide deck reviewed and approved as final structure baseline
+2026-04-27 | pitch-deck | Cover slide (PDF v2.4) confirmed as final reference
+2026-04-27 | pitch-deck | Philosophy slide ("نبني نوطّن نطوّر") confirmed as final reference
+2026-04-27 | pitch-deck | Challenges slide confirmed as final reference
+2026-04-27 | pitch-deck | Hero proposal "زراعة بلا تخمين" for Cover REJECTED (current version kept)
+2026-04-28 | pitch-deck | One-Liner + Bio slide DELETED (not pitch-worthy as standalone)
+2026-04-28 | pitch-deck | Final structure locked: 12 original slides ONLY (no AI additions)
+2026-04-28 | pitch-deck | Philosophy slide v2.1 prompt generated (unified Tajawal)
+2026-04-28 | pitch-deck | Full 12-slide analysis completed with P0/P1/P2 notes
+2026-04-28 | pitch-deck | Proposed "Strategic Alignment" slide REJECTED (AI suggestion not requested)
+2026-04-28 | pitch-deck | Proposed 16-slide structure REJECTED — kept 12 original
+2026-04-29 | pitch-deck | Original PPTX text fully extracted and analyzed
+2026-04-29 | pitch-deck | S6 (Market): SAM conflict — deck=2.5B vs Master Doc=4.2B — UNRESOLVED
+2026-04-29 | pitch-deck | S6 (Market): SOM conflict — deck=125M vs Master Doc=50M — UNRESOLVED
+2026-04-29 | pitch-deck | S11 (Team): "م. قائد التطوير الرقمي" placeholder still unresolved (P0)
+2026-04-29 | pitch-deck | S11 (Team): Ayman title wrong — current "كبير المهندسين" → correct "R&D Director, Co-founder 25%"
+2026-04-29 | pitch-deck | S11 (Team): Mohammed title wrong — current "رئيس العمليات" → correct "Co-founder Funder 25%"
+```
+
+### pitch-tool
+
+```
+2026-04-27 | pitch-tool | Pitch.com selected (initial choice)
+2026-04-27 | pitch-tool | Pitch.com upgraded to Pro at $25/month (Tajawal upload + Brand Kit + PPTX export no watermark)
+2026-04-27 | pitch-tool | Tajawal (4 weights) installed in Pitch Pro Brand Kit
+2026-04-27 | pitch-tool | Style Builder configured with 5 iGarden colors + RGBA
+2026-04-27 | pitch-tool | Theme saved as "iGarden Sunbolah Theme"
+2026-04-27 | pitch-tool | Style Builder sections set: Link, Title, Headline, Subheadline, Normal, Small, Table, Chart, Shape
+2026-04-28 | pitch-tool | Strategy shift: Pitch-only → Gamma + Pitch dual workflow
+2026-04-28 | pitch-tool | Gamma adopted for slide generation (speed); Pitch retained for final polish
+2026-04-28 | pitch-tool | Gamma credit balance: 400 points at conversation time
+2026-04-28 | pitch-tool | Gamma limitation: cannot upload Tajawal directly — Cairo as fallback
+2026-04-28 | pitch-tool | Jenspark mentioned as alternative generation tool
+2026-04-28 | pitch-tool | Final tool stack: Gamma (generate) → Pitch Pro (Tajawal + brand polish + PPTX export)
+```
+
+### pitch-brand
+
+```
+2026-04-27 | pitch-brand | Color: Deep Forest Green RGBA(15, 61, 46, 1)
+2026-04-27 | pitch-brand | Color: Corporate Green RGBA(27, 94, 63, 1)
+2026-04-27 | pitch-brand | Color: Lime Accent RGBA(124, 179, 66, 1)
+2026-04-27 | pitch-brand | Color: Bright Lime RGBA(165, 214, 63, 1)
+2026-04-27 | pitch-brand | Color: Cream RGBA(250, 250, 247, 1)
+2026-04-27 | pitch-brand | Color slot 5 was Gradient by default — converted to Solid Corporate Green
+2026-04-28 | pitch-brand | Typography rule: Tajawal (Regular/Medium/Bold/ExtraBold) for ALL text — Arabic and English (no Poppins)
+```
+
+### brand
+
+```
+2026-04-28 | brand | Unified typography rule adopted: Tajawal for everything (replaces Tajawal+Poppins mix)
+2026-04-29 | brand | Brand Messaging v1.1 declared mandatory reference for all content across platforms
+```
+
+
 ---
 
 ## استخدام
