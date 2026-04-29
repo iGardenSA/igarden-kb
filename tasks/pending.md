@@ -23,14 +23,42 @@
   - حدّث n8n Telegram credentials
   - أعِد setWebhook
   - سجّل: `2026-04-?? | telegram-bot | token rotated [REDACTED]` في events.md
-- [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history
+- [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history + chat report
   - `openssl rand -base64 32` لـ api key الجديد
   - `openssl rand -hex 16` لـ ota password الجديد
   - حدّث `secrets.yaml` على Pi 5 العميل 002
   - re-flash ESP32 بـ encryption key الجديد
-  - سجّل: `2026-04-?? | esp32-tank | api_encryption_key + ota_password rotated [REDACTED]`
+  - سجّل: `2026-04-?? | customer-002 | ESP32 api_encryption_key + ota_password rotated [REDACTED]`
+- [ ] **PostgreSQL password (CM5 — `igarden_data` / user `igarden`)** — مكشوف في chat report
+  - `docker exec igarden-postgres psql -U postgres -c "ALTER USER igarden WITH PASSWORD '...';"`
+  - حدّث n8n credentials لـ PostgreSQL
+  - سجّل: `2026-04-?? | cm5 | PostgreSQL password rotated [REDACTED]`
+- [ ] **Mosquitto password (`igarden-sensors`)** — مكشوف في chat report
+  - تحديث `/etc/mosquitto/passwd` على CM5
+  - تحديث n8n MQTT credential
+  - تحديث ESP32 firmware (re-flash) — يمسّ كل الأجهزة المتصلة بـ Mosquitto
+  - سجّل: `2026-04-?? | cm5 | Mosquitto password rotated [REDACTED]`
+- [ ] **n8n Basic Auth password** — مكشوف في chat report
+  - تحديث `N8N_BASIC_AUTH_PASSWORD` env في n8n container + restart
+  - سجّل: `2026-04-?? | n8n | Basic Auth password rotated [REDACTED]`
+- [ ] **ESP32 AP fallback password** — مكشوف في chat report
+  - `openssl rand -base64 12`
+  - تحديث `secrets.yaml` على Pi 5 العميل 002
+  - re-flash ESP32
+  - سجّل: `2026-04-?? | customer-002 | ESP32 AP fallback password rotated [REDACTED]`
+
+> ⚠️ **n8n Encryption Key مكشوف أيضاً** — لكن **لا تدوّره** قبل re-encrypting كل credentials في n8n DB يدوياً (وإلّا ستفقد كل الـ credentials). قرار عمل لاحق.
 
 > 📌 بعد التدوير: حدّث `SECRETS.md.example` إذا تغيّرت سياسة، وقدّر الحاجة لـ `git filter-repo` لمسح history.
+
+### `vercel-account` — تجديد Vercel Pro Trial 🟡 P0/P1 حدودي
+
+> ⏰ **deadline: 2026-05-07** — اليوم 2026-04-29، باقي ~8 أيام.
+
+- [ ] قرار: ترقية إلى Pro paid plan ($20/شهر) أم العودة لـ Hobby (مجاني)؟
+- [ ] إذا Hobby: نقل demo.igarden.sa + igarden.sa إلى free tier (يفقد بعض ميزات Pro)
+- [ ] إذا Pro: تفعيل بطاقة دفع، تأكيد billing email = info@igarden.sa
+- [ ] /schedule reminder agent مُعدّ ليفحص يوم 2026-05-05
 
 ### `customer-002` — إكمال الغولاء قبل الذهاب للأحساء
 - [ ] **معايرة pH** بمحاليل قياسية 4.0 + 7.0
@@ -131,7 +159,7 @@
 
 | الأولوية | عدد المهام | المسؤول الافتراضي |
 |---|---|---|
-| 🔴 P0 | 12 | علي |
+| 🔴 P0 | 17 | علي |
 | 🟡 P1 | 8 | علي + أيمن |
 | 🟢 P2 | 11 | الفريق |
 | 🔵 P3 | 6 | لاحقاً |
