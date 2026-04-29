@@ -51,6 +51,36 @@
 
 > 📌 بعد التدوير: حدّث `SECRETS.md.example` إذا تغيّرت سياسة، وقدّر الحاجة لـ `git filter-repo` لمسح history.
 
+### `secrets-incident` — إجراءات إضافية بعد التدوير
+
+- [ ] **T-SEC-004 — Paranoid sweep:** فحص شامل لـ git history للأسرار التي قد تكون فاتتنا
+  ```bash
+  # adapt patterns حسب الحاجة
+  git log --all -p | grep -iE "(password|secret|token|api[_-]?key|sk-ant-|ghp_|AIza)" | sort -u
+  # أو استخدم: trufflehog filesystem . أو gitleaks detect
+  ```
+- [ ] **T-SEC-007 — أنشئ `/incidents/2026-04-29-secrets-leak/`** بعد إكمال rotation:
+  - `disclosure.md` (الـ timeline من `secrets-incident` entity)
+  - `rotation-log.md` (سجل كل مفتاح تم تدويره)
+  - `postmortem.md` (السبب الجذري + الإجراءات الوقائية)
+- [ ] **T-SEC-008 — أنشئ `/security/`** للسياسات طويلة المدى:
+  - `access-matrix.md` (من يصل إلى ماذا)
+  - `secrets-inventory.md` (جرد كامل بدون قيم)
+  - `incident-response.md` (playbook لأيّ تسريب مستقبلي)
+
+### `info@igarden.sa` — Single Point of Failure 🟡
+
+- [ ] **T-SEC-009 — تخفيف خطر `info@igarden.sa` كنقطة فشل وحيدة**
+  - حالياً مرتبط بـ: GitHub، Vercel، Cloudflare، Anthropic، Anyone-with-recovery
+  - الخطر: اختراق هذا الإيميل = وصول كامل لكل الأنظمة
+  - الإجراءات المقترحة:
+    1. تفعيل 2FA قوي (hardware key أو authenticator)
+    2. إيميل recovery منفصل (مثل `recovery@igarden.sa`)
+    3. مراجعة دورية لـ "Connected apps" في Google Workspace
+    4. (اختياري) إيميلات منفصلة per-service: `billing@`, `tech@`, `ops@`
+
+---
+
 ### `vercel-account` — تجديد Vercel Pro Trial 🟡 P0/P1 حدودي
 
 > ⏰ **deadline: 2026-05-07** — اليوم 2026-04-29، باقي ~8 أيام.
