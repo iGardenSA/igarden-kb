@@ -365,6 +365,32 @@
 2026-04-29 | founder | Tailscale install commands for Linux Mint 22 received and ready to execute
 ```
 
+### hq-strategy
+
+```
+2026-04-24 | hq-strategy | HQ Strategy Session opened (48-hour intensive: 24-25 April)
+2026-04-25 | hq-strategy | CLAUDE.md v2.0 produced (758 lines, +56% from v1.x, 14 ADRs T001-T014, 6 new T009-T014)
+2026-04-25 | hq-strategy | README.md rebuilt (28 → 290 lines, Shields.io + Quick Start + Tech Stack)
+2026-04-25 | hq-strategy | CHANGELOG_CLAUDE_md.md created (v1.1 → v1.2 → v2.0 evolution)
+2026-04-25 | hq-strategy | iGarden_Web_Rebuild_Prompt.txt produced (274 lines — covers igarden.sa + shop + demo + product pages)
+2026-04-25 | hq-strategy | iGarden_Presentations_Prompt.txt produced (381 lines — 5 pitch types + 4 profile types)
+2026-04-25 | hq-strategy | iGarden_Gemini_Gem_Instructions produced (473 lines, .md + .txt)
+2026-04-25 | hq-strategy | PROJECT_STATE.md concept introduced (369 lines) — cross-conversation sync file
+2026-04-25 | hq-strategy | BLOCK-006 archive system proposed (16 sections for Master Command)
+2026-04-25 | hq-strategy | Hybrid AI architecture mapped: CM5 + Pi 5 + Dell + Mint roles distributed
+2026-04-25 | hq-strategy | Vision AI plan: Pi 5 + AI HAT + IMX500
+2026-04-25 | hq-strategy | Session closed; Master Doc still on v1.0 in Project KB (gap flagged for v1.5 build)
+2026-04-29 | hq-strategy | PROJECT_STATE.md approach SUPERSEDED by events.md as Source of Truth (different mechanism, same purpose)
+```
+
+### pitch-deck
+
+```
+2026-04-25 | pitch-deck | Pitch Sunbolah v2.1 produced (16 slides, RTL clean, real logos, Brand Guidelines v1.0 compliant, Speaker Notes per slide)
+2026-04-25 | pitch-deck | Files: iGarden_Pitch_Sunbolah_v21.pptx (3 MB) + .pdf (546 KB)
+```
+
+
 
 ### pitch-deck
 
