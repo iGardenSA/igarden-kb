@@ -194,10 +194,10 @@ git push --force origin claude/session-report-knowledge-base-l66cl
 
 | # | السرّ | الأولوية | الحالة | تاريخ التدوير |
 |---|---|:---:|:---:|---|
-| 1 | Telegram bot token | 🔴 P0 | ⏳ قيد التنفيذ | — |
+| 1 | Telegram bot token | 🔴 P0 | ✅ DONE | 2026-04-30 |
 | 2 | ESPHome api_encryption_key | 🔴 P0 | ⬜ لم يبدأ | — |
 | 3 | ESPHome ota_password | 🔴 P0 | ⬜ لم يبدأ | — |
-| 4 | Anthropic API key | 🟡 P1 | ⬜ لم يبدأ | — |
+| 4 | Anthropic API key | 🟡 P1 | ✅ DONE | 2026-04-30 |
 | 5 | PostgreSQL password | 🟡 P1 | ⬜ لم يبدأ | — |
 | 6 | Mosquitto password | 🟡 P1 | ⬜ لم يبدأ | — |
 | 7 | n8n basic auth | 🟡 P1 | ⬜ لم يبدأ | — |
