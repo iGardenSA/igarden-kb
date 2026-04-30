@@ -92,6 +92,31 @@
 
 - [ ] **T-DOC-004:** قرار الـ 3 Briefs — تحديث أم استخدام كما هي؟ (السؤال طُرح ولم يُجَب)
 
+### `ai-daily-routine` — تنفيذ الروتين اليومي (يبدأ 2026-05-02)
+
+**🔴 P0 — السبت 2026-05-02 (10 دقائق):**
+- [ ] **T-AI-001:** الاشتراك في Ben's Bites (https://bensbites.com) — بريد `info@igarden.sa`
+- [ ] **T-AI-002:** Anthropic News bookmark/RSS (https://www.anthropic.com/news)
+- [ ] **T-AI-003:** الاشتراك في The Rundown AI (https://www.therundown.ai)
+- [ ] **T-AI-004:** حفظ قالب الموجز اليومي في Notes أو KB
+- [ ] **T-AI-005:** اختبار المنبّه (21:00) ليلة السبت
+
+**🟡 P1 — خلال الأسبوع 2026-05-03 → 2026-05-08:**
+- [ ] **T-AI-006:** اختيار RSS reader (Feedly / Inoreader / Reeder) — اختياري
+- [ ] **T-AI-007:** أول 5 موجزات يومية (الأحد-الخميس)
+- [ ] **T-AI-008:** أول مراجعة أسبوعية الجمعة 2026-05-08
+
+**🟢 P2 — مراجعة 2026-05-16:**
+- [ ] **T-AI-009:** مراجعة تجربة الأسبوعين
+- [ ] **T-AI-010:** تصميم n8n workflow (RSS → Claude filter → Telegram + Drive)
+- [ ] **T-AI-011:** صياغة prompt الفلترة بالعربي (مبني على بيانات الأسبوعين)
+
+**🔵 P3 — مستقبلي:**
+- [ ] **T-AI-012:** PR تلقائي على repo `igarden-kb` للعناصر القابلة للتنفيذ
+- [ ] **T-AI-013:** mini-dashboard على `igarden.sa/internal/ai-radar`
+
+---
+
 ### `week-2026-W18` — مهام الأسبوع (محفوظة 2026-04-30)
 
 - [ ] **T-WK-001 — Telegram Bot KB integration:** ربط البوت بقاعدة معرفة iGarden (System Prompt أو GitHub raw URLs)

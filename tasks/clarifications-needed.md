@@ -332,6 +332,24 @@
 
 ---
 
+## 3️⃣0️⃣ الفرع `claude/session-report-knowledge-base-l66cl` لم يُدمج إلى `main`
+
+**الملاحظة:** كل العمل في هذه الجلسة (من 2026-04-29) على الفرع `claude/session-report-knowledge-base-l66cl`. الـ `main` يحوي إصدار قديم فقط.
+
+**الأثر:**
+- روابط `raw.githubusercontent.com/.../main/<file>` تُرجع **404** للملفات الجديدة (events.md، SESSIONS.md، tasks/، prompts/، إلخ)
+- Claude.ai في محادثة جديدة يقرأ من `main` افتراضياً → سيفقد كل التحديثات
+- مستشاروك الذين يحاولون قراءة الـ KB يحصلون على معلومات قديمة
+
+**الحلول:**
+1. **PR + merge إلى `main`** (الموصى به) — يجعل كل العمل متاحاً للقراءة
+2. **استخدام رابط الفرع المباشر** في إرشادات Claude.ai (`/blob/claude/session-report-knowledge-base-l66cl/`) — حلّ مؤقّت
+3. **تحديث `default branch`** على GitHub إلى الفرع الحالي (يكسر roadmap المعتاد)
+
+**التوصية:** الخيار 1 — PR + squash merge بعد مراجعة سريعة.
+
+---
+
 ## 📝 الـ Workflow
 
 عند الإجابة على أيّ سؤال:
