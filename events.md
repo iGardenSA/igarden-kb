@@ -91,6 +91,8 @@
 2026-04-29 13:21 | secrets-incident | Leak disclosed during session; redaction applied to working tree only (commit f26c050) — git history STILL contains secrets
 2026-04-29 | secrets-incident | Anthropic API key 'igarden-telegram-bot' name (not value) mentioned in chat reports
 2026-04-29 | secrets-incident | Rotation status: PENDING — user deferred to "tomorrow"; no keys revoked yet
+2026-04-30 | secrets-incident | Rotation phase 1 DONE: Telegram bot token + Anthropic API key rotated — old credentials invalidated
+2026-04-30 | secrets-incident | Rotation phase 1 remaining: ESPHome keys (3) + PostgreSQL + Mosquitto + n8n basic auth + AP fallback (6 keys still to rotate)
 2026-04-29 | secrets-incident | Tools missing on host: git-filter-repo + bfg unavailable — full history scrub deferred
 ```
 
@@ -274,6 +276,7 @@
 2026-04-29 | telegram-bot | Activated via n8n + Claude API (claude-sonnet-4-5)
 2026-04-29 | telegram-bot | System prompt: Arabic iGarden assistant
 2026-04-29 | telegram-bot | Verified: receives Arabic messages and replies with iGarden context
+2026-04-30 | telegram-bot | Token ROTATED [REDACTED — see password manager] — old token (exposed in git history) revoked via BotFather
 ```
 
 ### anthropic-api
@@ -282,6 +285,7 @@
 2026-04-27 | anthropic-api | Balance snapshot: $24.00 of $28.75 original credit
 2026-04-29 | anthropic-api | New API key created: name "igarden-telegram-bot", workspace Default
 2026-04-29 | anthropic-api | Key stored in n8n HTTP node only (NOT in this repo)
+2026-04-30 | anthropic-api | Key ROTATED [REDACTED — see password manager] — old key (igarden-telegram-bot, mentioned in chat reports) disabled in Console
 ```
 
 ### vercel-account
