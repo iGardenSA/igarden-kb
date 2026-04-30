@@ -319,6 +319,8 @@
 2026-04-29 | cloudflare-tunnel | DNS pending: igarden.sa is on Vercel nameservers (not Cloudflare)
 2026-04-30 | cloudflare-tunnel | Permanent tunnel achieved via igarden.work domain (Cloudflare-native DNS) — supersedes trycloudflare temp solution
 2026-04-30 | cloudflare-tunnel | cloudflared running as systemd service on igarden-hub (not Docker container) — more reliable
+2026-04-30 | cloudflare-tunnel | NEW tunnel created for igarden.work: ID 960b1969-8ac9-4146-bf96-5998421536cf (supersedes 3942be75-... iGarden-cm5 tunnel from 2026-04-29)
+2026-04-30 | cloudflare-tunnel | Decision: Subdomain Delegation chosen over full DNS migration (igarden.sa stays on Vercel)
 ```
 
 ### dns-vercel
@@ -361,6 +363,9 @@
 2026-04-29 | tailnet | Setup order locked: laptop → Note 22 → CM5 → Pi 5
 2026-04-29 | tailnet | Shared layer composition adopted: Notion + Drive + GitHub + Tailscale + Claude Projects
 2026-04-30 | tailnet | Tailnet operational: hp-elitebook + igarden-hub + s24-ultra connected
+2026-04-30 | tailnet | Tailscale IPs assigned: hp-elitebook (100.98.152.19) + igarden-hub (100.125.96.50) + s24-ultra (100.69.11.105)
+2026-04-30 | tailnet | Account: info@igarden.sa — Trial 14 days
+2026-04-30 | tailnet | n8n accessible from mobile via Tailscale: igarden-hub:5678
 2026-04-30 | tailnet | SSH verified working over Tailnet: hp-elitebook ↔ igarden-hub
 ```
 
