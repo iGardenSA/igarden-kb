@@ -101,6 +101,16 @@
 
 - [ ] **T-DOC-004:** قرار الـ 3 Briefs — تحديث أم استخدام كما هي؟ (السؤال طُرح ولم يُجَب)
 
+### `week-2026-W18` — مهام الأسبوع (محفوظة 2026-04-30)
+
+- [ ] **T-WK-001 — Telegram Bot KB integration:** ربط البوت بقاعدة معرفة iGarden (System Prompt أو GitHub raw URLs)
+- [ ] **T-WK-002 — منصة المناقصات الحكومية:** بدء التسجيل/التصفح
+- [ ] **T-WK-003 — إقرار ZATCA:** قبل **31 مايو 2026** (deadline حرج)
+- [ ] **T-WK-004 — مراجعة Pitch سنبلة:** الجمعة 1 مايو 2026
+- [ ] **T-WK-005 — إصلاح locale warnings** على igarden-hub
+- [ ] **T-WK-006 — vision-hub:** إضافته لـ Tailscale + Cloudflare Tunnel
+- [ ] **T-WK-007 — متابعة Tailscale Trial:** 14 يوم من 2026-04-30 → ينتهي ~2026-05-14 — قرار: Free tier أم Pro؟
+
 ### `info@igarden.sa` — Single Point of Failure 🟡
 
 - [ ] **T-SEC-009 — تخفيف خطر `info@igarden.sa` كنقطة فشل وحيدة**
