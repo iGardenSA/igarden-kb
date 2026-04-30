@@ -391,6 +391,22 @@
 2026-04-29 | founder | Tailscale install commands for Linux Mint 22 received and ready to execute
 ```
 
+### ai-daily-routine
+
+```
+2026-05-01 | ai-daily-routine | Strategic decision: Daily AI tools/updates research adopted as core daily routine
+2026-05-01 | ai-daily-routine | 3-layer system designed (sources → Claude filter → Telegram + KB archive)
+2026-05-01 | ai-daily-routine | Time slot fixed: 21:00 local (evening review before sleep)
+2026-05-01 | ai-daily-routine | Language locked: Arabic only
+2026-05-01 | ai-daily-routine | Sources locked (3 only): Ben's Bites + Anthropic News + The Rundown AI
+2026-05-01 | ai-daily-routine | Weekly cadence: Sun-Thu reading, Fri review, Sat rest
+2026-05-01 | ai-daily-routine | Phase 1 (manual) starts 2026-05-02
+2026-05-01 | ai-daily-routine | Phase 2 (n8n automation on CM5) scheduled review: 2026-05-16
+2026-05-01 | ai-daily-routine | Android alarm configured (21:00, daily 7 days/week)
+2026-05-01 | ai-daily-routine | Daily brief markdown template defined (5 sections)
+2026-05-01 | ai-daily-routine | KB archive path proposed: kb/ai-daily/YYYY-MM/DD.md
+```
+
 ### hq-strategy
 
 ```
