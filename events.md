@@ -426,6 +426,14 @@
 2026-04-29 | founder | Tailscale install commands for Linux Mint 22 received and ready to execute
 ```
 
+### github-mastery
+
+```
+2026-05-01 | github-mastery | 30-day learning plan adopted (4 weeks: basics + security + collab + CI/CD)
+2026-05-01 | github-mastery | Plan saved at tasks/learning/github-mastery-30day.md (30 daily tasks)
+2026-05-01 | github-mastery | Week 2 (security) flagged as highest priority — leverages scripts/igarden-security-fix.sh
+```
+
 ### ai-daily-routine
 
 ```
