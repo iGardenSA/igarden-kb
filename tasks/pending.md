@@ -12,8 +12,8 @@
 
 > ⚠️ هذه المهمة لا تنتظر — الـ tokens مكشوفة الآن (في تقارير محادثات + git history سابقة).
 
-- [x] ~~**Anthropic API key (`igarden-telegram-bot`)**~~ ✅ ROTATED 2026-04-30
-- [x] ~~**Telegram Bot Token (`@igarden_sa_bot`)**~~ ✅ ROTATED 2026-04-30
+> ✅ **Anthropic API key + Telegram Bot Token مُدوَّران 2026-04-30** (راجع `events.md` تحت `anthropic-api` و `telegram-bot`)
+
 - [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history + chat report
   - `openssl rand -base64 32` لـ api key الجديد
   - `openssl rand -hex 16` لـ ota password الجديد
