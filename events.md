@@ -79,6 +79,10 @@
 2026-04-29 | kb | brand/tagline-evolution.md created
 2026-04-27 | kb | Strategy: GitHub repo as Single Source of Truth (supersedes "Project Knowledge only")
 2026-04-27 | kb | Architecture-strategy: "iGarden = combination of right systems" supersedes "iGarden = full custom platform"
+2026-04-30 | kb | Major financial-session expansion: 33 events, customers/004-binladen.md, partnerships/kamal-shajri.md, infrastructure/gosi-mudad-qiwa.md, decisions/2026-04-30-partnership.md added
+2026-04-30 | kb | Major correction batch applied to customer-002 (identity, location, contract value, system specs)
+2026-04-30 | kb | Recommend creating _meta/entities-glossary.md to prevent name drift
+2026-04-30 | kb | _meta/entities-glossary.md created (glossary of canonical entity names)
 ```
 
 ### secrets-incident
@@ -172,6 +176,25 @@
 2026-04-27 | customer-002 | SD card at 99% capacity (14GB / 15GB) — flagged P0
 2026-04-27 | customer-002 | ESP32 igarden-tank online at 192.168.8.137
 2026-04-27 | customer-002 | Doser B/C GPIO migrated 16/17 → 25/26 (UART conflict)
+2026-04-30 | customer-002 | CORRECTION: customer name = Najat Ali Hassan Hanbouli (NOT "Aljawhara Alqahtani" — earlier assumption wrong)
+2026-04-30 | customer-002 | National ID: 109960229
+2026-04-30 | customer-002 | CORRECTION: site = Huda Al-Sham, NW Jeddah, Makkah region (NOT Ahsa)
+2026-04-30 | customer-002 | Greenhouse spec: 40m × 9m × 3.2m = 360 m², single arched cooled (height 3.2m supersedes 3.5m draft)
+2026-04-30 | customer-002 | CORRECTION: contract value = 75,900 SAR incl. VAT (supersedes 30,000 logged earlier)
+2026-04-30 | customer-002 | Breakdown: 19K greenhouse + 27K hydroponics + 10K smart + 10K maintenance + 9.9K VAT
+2026-04-30 | customer-002 | System type: Raft DWC, 7,000 seedling capacity
+2026-04-30 | customer-002 | Troughs: 2 × 30m × 4m × 20cm = 240 m³ water volume
+2026-04-30 | customer-002 | Cooling: Italian 1.5HP × 2 fans, 45,000 m³/h (supersedes "Chinese fans" assumption)
+2026-04-30 | customer-002 | CORRECTION: payment schedule = 50/20/20/10 (supersedes 40/25/25/10)
+2026-04-30 | customer-002 | Warranty: 10y structure, 1y electronics, 3-month full maintenance
+2026-04-30 | customer-002 | Bank: Al Rajhi acct 618000010006086484051 / IBAN SA0680000618608016484051
+2026-04-30 | customer-002 | Daily power: 38-60 kWh summer, 20-30 kWh winter
+2026-04-30 | customer-002 | Air pumps add 24/7 base load ~1 kW continuous (Raft requirement — sizes battery bank)
+2026-04-30 | customer-002 | Phase-2 reference price: 75,900 SAR per identical greenhouse (×4 = 276-301K supersedes 362-387K estimate)
+2026-04-30 | customer-002 | CORRECTION: contracting entity = iGarden ("Rukn Al-Hadeeqah Al-Thakiyah" was a drafting error)
+2026-04-30 | customer-002 | Latest contract version received (Drive ID: 1XQa1M2sgpQN_Cxj_r5tkXAPdLH7GEzs9_2m_ihDp_WE) — supersedes old draft 1oG...
+2026-04-30 | customer-002 | Completion: 85% (supersedes 80% from 2026-04-27)
+2026-04-30 | customer-002 | New requirement: site lacks grid power — solar solution needed
 ```
 
 ### customer-003
@@ -382,7 +405,6 @@
 2026-04-30 | igarden-work | api.igarden.work → garden-hub:8000 — ready (FastAPI Native eventual host)
 ```
 
-
 ### founder
 
 ```
@@ -405,6 +427,10 @@
 2026-05-01 | ai-daily-routine | Android alarm configured (21:00, daily 7 days/week)
 2026-05-01 | ai-daily-routine | Daily brief markdown template defined (5 sections)
 2026-05-01 | ai-daily-routine | KB archive path proposed: kb/ai-daily/YYYY-MM/DD.md
+2026-05-01 | ai-daily-routine | Strategic decision: daily AI tools/updates research adopted as core daily routine
+2026-05-01 | ai-daily-routine | Phase 2 (n8n automation on CM5) scheduled review date: 2026-05-16
+2026-05-01 | ai-daily-routine | Daily alarm configured on Android (21:00, all 7 days) — pending first-night test
+2026-05-01 | ai-daily-routine | KB archive path: ai-daily/YYYY-MM/DD.md
 ```
 
 ### hq-strategy
@@ -432,19 +458,11 @@
 2026-04-29 | hq-strategy | PROJECT_STATE.md approach SUPERSEDED by events.md as Source of Truth (different mechanism, same purpose)
 ```
 
-
 ### pitch-deck
 
 ```
 2026-04-25 | pitch-deck | Pitch Sunbolah v2.1 produced (16 slides, RTL clean, real logos, Brand Guidelines v1.0 compliant, Speaker Notes per slide)
 2026-04-25 | pitch-deck | Files: iGarden_Pitch_Sunbolah_v21.pptx (3 MB) + .pdf (546 KB)
-```
-
-
-
-### pitch-deck
-
-```
 2026-04-27 | pitch-deck | Original 12-slide deck reviewed and approved as final structure baseline
 2026-04-27 | pitch-deck | Cover slide (PDF v2.4) confirmed as final reference
 2026-04-27 | pitch-deck | Philosophy slide ("نبني نوطّن نطوّر") confirmed as final reference
@@ -462,6 +480,21 @@
 2026-04-29 | pitch-deck | S11 (Team): "م. قائد التطوير الرقمي" placeholder still unresolved (P0)
 2026-04-29 | pitch-deck | S11 (Team): Ayman title wrong — current "كبير المهندسين" → correct "R&D Director, Co-founder 25%"
 2026-04-29 | pitch-deck | S11 (Team): Mohammed title wrong — current "رئيس العمليات" → correct "Co-founder Funder 25%"
+2026-04-26 | pitch-deck | igarden_sunbolah_2026_pitch.pptx — first version uploaded for review
+2026-04-28 | pitch-deck | Redesigned version uploaded — score 8.4/10
+2026-04-28 | pitch-deck | Final structure SUPERSEDES 12-slide (locked 2026-04-28): now 13 slides with Competitive added
+2026-04-28 | pitch-deck | 16-slide proposal REJECTED (redundant for accelerator pitch)
+2026-04-28 | pitch-deck | 14-slide external proposal REJECTED (closer to company overview, not pitch)
+2026-04-28 | pitch-deck | 11-slide structure REJECTED (no Competitive + Traction not split)
+2026-04-28 | pitch-deck | Slide structure decision: Competitive Analysis added between Market and Business Model
+2026-04-28 | pitch-deck | Slide 02 changed: "Why Now / Vision 2030 + MEWA" replaces "About Us / Bio" (Sunbolah is MEWA-affiliated)
+2026-04-28 | pitch-deck | Slide 12: Roadmap + Ask MERGED into one slide (time pressure + avoid duplication)
+2026-04-28 | pitch-deck | Differentiator: "AI as 4th team member" added (vs other pitch teams)
+2026-04-28 | pitch-deck | Philosophy slide repositioned: 02 → 04 Solution (logical sequence)
+2026-04-28 | pitch-deck | Sidebar (left vertical strip) REMOVED from approved template
+2026-04-28 | pitch-deck | Final filename: igarden_sunbolah_2026_redesigned_20260428063310.pptx — score 8.4/10
+2026-04-28 | pitch-deck | Full 13-slide content text approved
+2026-04-29 | pitch-deck | Page-by-page design review prompt completed
 ```
 
 ### pitch-tool
@@ -529,7 +562,6 @@
 ```
 2025-??-?? | igarden-smart-os | Live in Osfan station — production system
 2025-??-?? | igarden-smart-os | 208 unit tests passing (FastAPI Native)
-2025-H1   | igarden-smart-os | First Saudi plant database — 38 plant disease classes
 ????-??-?? | igarden-smart-os | Architecture: 70% local (PDPL) + 30% cloud — hybrid
 ????-??-?? | igarden-smart-os | Stack: FastAPI + PostgreSQL 16 + MQTT Mosquitto + Redis + Docker
 ????-??-?? | igarden-smart-os | Decision Router for local-vs-cloud workload routing
@@ -578,7 +610,6 @@
 
 ```
 ????-??-?? | osfan-station | R&D station established (Ghulah, north Jeddah)
-2025-H1   | osfan-station | 5 field workshops conducted
 2025-??-?? | osfan-station | Hosting Smart OS as live production system
 ```
 
@@ -588,27 +619,202 @@
 2025-12-?? | pitch-2025 | First pitch version prepared for Sunbolah accelerator
 ```
 
-### pitch-deck
+### للحصول
 
 ```
-2026-04-26 | pitch-deck | igarden_sunbolah_2026_pitch.pptx — first version uploaded for review
-2026-04-28 | pitch-deck | Redesigned version uploaded — score 8.4/10
-2026-04-28 | pitch-deck | Final structure SUPERSEDES 12-slide (locked 2026-04-28): now 13 slides with Competitive added
-2026-04-28 | pitch-deck | 16-slide proposal REJECTED (redundant for accelerator pitch)
-2026-04-28 | pitch-deck | 14-slide external proposal REJECTED (closer to company overview, not pitch)
-2026-04-28 | pitch-deck | 11-slide structure REJECTED (no Competitive + Traction not split)
-2026-04-28 | pitch-deck | Slide structure decision: Competitive Analysis added between Market and Business Model
-2026-04-28 | pitch-deck | Slide 02 changed: "Why Now / Vision 2030 + MEWA" replaces "About Us / Bio" (Sunbolah is MEWA-affiliated)
-2026-04-28 | pitch-deck | Slide 12: Roadmap + Ask MERGED into one slide (time pressure + avoid duplication)
-2026-04-28 | pitch-deck | Differentiator: "AI as 4th team member" added (vs other pitch teams)
-2026-04-28 | pitch-deck | Philosophy slide repositioned: 02 → 04 Solution (logical sequence)
-2026-04-28 | pitch-deck | Sidebar (left vertical strip) REMOVED from approved template
-2026-04-28 | pitch-deck | Final filename: igarden_sunbolah_2026_redesigned_20260428063310.pptx — score 8.4/10
-2026-04-28 | pitch-deck | Full 13-slide content text approved
-2026-04-29 | pitch-deck | Page-by-page design review prompt completed
 ```
 
+### لقراءة
 
+```
+```
+
+### لإضافة
+
+```
+```
+
+### igarden-finance
+
+```
+2026-04-30 | igarden-finance | Financial statements 2025 completed (7 sheets: summary + P&L + balance + cashflow + payroll + monthly + notes)
+2026-04-30 | igarden-finance | Financial statements 2026 completed (5 sheets, linked to 2025 closing)
+2026-04-30 | igarden-finance | Q1 2026 bank statement analyzed: 158 transactions in 9 categories
+2026-04-30 | igarden-finance | Total revenue 2025: 250,041 SAR | Gross profit: 63,166 SAR (25% margin)
+2026-04-30 | igarden-finance | Net loss 2025: (20,102) SAR — submitted to ZATCA, normal for first operational year
+2026-04-30 | igarden-finance | Operating expenses 2025: 76,409 SAR | Depreciation: 4,744.45 SAR
+2026-04-30 | igarden-finance | Cost of revenue 2025: 186,876.51 SAR
+```
+
+### igarden-zakat
+
+```
+2026-04-30 | igarden-zakat | Zakat 2025 declaration submitted to ZATCA — ref 26001314256
+2026-04-30 | igarden-zakat | Zakat base: 82,012 SAR | Zakat due: 2,114.01 SAR | No penalties
+```
+
+### igarden-vat
+
+```
+2026-04-30 | igarden-vat | VAT Q1 2026 declaration submitted to ZATCA — net due 18,285.31 SAR
+2026-04-30 | igarden-vat | Q1 2026 actual sales (29 invoices): 177,613.72 + VAT 26,642.06 = 204,255.78 SAR
+2026-04-30 | igarden-vat | Q1 2026 actual purchases: 55,711.65 + VAT 8,356.75 = 64,068.40 SAR
+2026-04-30 | igarden-vat | Total ZATCA obligations Q2 2026: 20,399.32 SAR (18,285.31 VAT + 2,114.01 Zakat)
+```
+
+### project-fatima
+
+```
+2026-04-30 | project-fatima | Invoice value confirmed at 126,000 SAR (NOT 124,488 — diff was bank commissions)
+2026-04-30 | project-fatima | Project cost: 62,304 SAR (fiberglass 22,304 + structures 25,000 + labor 15,000)
+2026-04-30 | project-fatima | Treated as "projects-in-delivery" on 31/12/2025; revenue + VAT booked in 2026
+```
+
+### project-ghoula
+
+```
+2026-04-30 | project-ghoula | Project (customer Amira Al-Jamal) confirmed: 53,000 SAR incl. VAT — executed Q1 2026
+```
+
+### partnership-decision
+
+```
+2026-04-30 | partnership-decision | Partnership structure 50/25/25 (Ali / Mohammed / Ayman) approved — effective 1/4/2026
+2026-04-30 | partnership-decision | Equity-split methodology: 50% labor + 50% assets
+2026-04-30 | partnership-decision | Ali contribution (50,000): car 22,000 + molds 12,000 + samples 5,500 + goods 6,500 + tools 4,000
+2026-04-30 | partnership-decision | Mohammed contribution: 25,000 SAR cash (from original 100,000 capital)
+2026-04-30 | partnership-decision | Ayman contribution: 25,000 SAR — paid directly to Mohammed before partnership activation
+2026-04-30 | partnership-decision | Capital remains 100,000 SAR in commercial register (no change)
+2026-04-30 | partnership-decision | Mohammed remaining current account ~60,675 SAR — to be settled later from profits
+```
+
+### partner-salaries
+
+```
+2026-04-30 | partner-salaries | Ali + Ayman monthly salary: 3,000 SAR each (Mohammed unpaid) — effective 1/4/2026
+```
+
+### accounting-method
+
+```
+2026-04-30 | accounting-method | Approved Fatima project as "projects-in-delivery" 31/12/2025 — revenue + VAT booked in 2026
+2026-04-30 | accounting-method | Opening balance 1/4/2026 reconciled to 31/12/2025 closing
+```
+
+### balance-sheet-2025
+
+```
+2026-04-30 | balance-sheet-2025 | Total assets 120,030 | Total liabilities 40,132 | Equity (Mohammed) 79,898
+```
+
+### salary-register-2025
+
+```
+2026-04-30 | salary-register-2025 | Total salaries 2025: 23,200 SAR (Ayman 4,000 + Mohammed Al-Asad 12,000 + Anas 7,200)
+```
+
+### inventory-2025
+
+```
+2026-04-30 | inventory-2025 | Closing inventory 31/12/2025: 8,137.60 SAR (steel + plastic + cartons + chemicals + supplies)
+```
+
+### gosi-alert
+
+```
+2026-04-30 | gosi-alert | Legal alert: company NOT registered in GOSI — must register retroactively before partnership activation
+```
+
+### regulatory-pending
+
+```
+2026-04-30 | regulatory-pending | Pending regulatory tasks: GOSI, Mudad, Qiwa, CR update (50/25/25 partners), notarized partnership contract, employment contracts, Ejar lease registration
+```
+
+### future-system
+
+```
+2026-04-30 | future-system | Adopted Qoyod (قيود) as daily accounting system — supports Rajhi-Business integration + ZATCA Phase 2
+```
+
+### team-expansion
+
+```
+2026-04-30 | team-expansion | Abdullah assigned: daily invoice intake + data entry into Qoyod
+```
+
+### customer-004
+
+```
+2026-04-30 | customer-004 | Initial meeting with Bandar Tariq Bin Laden (Modern Foods Trading Co.) and father Tariq
+2026-04-30 | customer-004 | Potential scopes: 7×8m greenhouse + barley sprouting room + 30 kW solar + restaurant greenhouse
+2026-04-30 | customer-004 | Assessment: serious but unclear — needs financial-commitment test before time investment
+2026-04-30 | customer-004 | Strategic priority: barley sprouting room + referral network (NOT first big project)
+```
+
+### partnership-kamal
+
+```
+2026-04-30 | partnership-kamal | Kamal Al-Shajri (Yemeni engineer, greenhouse contractor) — written 10-15% commission agreement required before any joint project
+```
+
+### installment-request
+
+```
+2026-04-30 | installment-request | VAT installment letter prepared (18,285.31 SAR) — justified by operational obligations + startup-phase burden
+2026-04-30 | installment-request | Submission scheduled: 2026-05-01 via ZATCA portal (with Rajhi Q1 statement attachment)
+```
+
+### sunbulah
+
+```
+2026-04-30 | sunbulah | Identity confirmed: sunbulah = customer-002 (Najat Hanbouli) — NOT a separate customer
+2026-04-30 | sunbulah | May 7 pitch reframed as Phase-2 expansion offer (not intro pitch)
+2026-04-30 | sunbulah | Compliance dashboard mockup created (igarden-compliance-dashboard.html)
+2026-04-30 | sunbulah | Solar RFQ created with 3 options (iGarden-Solar-RFQ-2026.docx)
+2026-04-30 | sunbulah | Comparison cheat-sheet created (iGarden-Solar-Comparison-Sheet.html)
+```
+
+### strategy
+
+```
+2026-04-30 | strategy | MEWA enforcement trends mapped: 5 strategic opportunities identified
+2026-04-30 | strategy | Positioning shift: IoT vendor → Smart Energy & Compliance Integrator
+2026-04-30 | strategy | Approach decided: Proof-First → Positioning → MMP (60-day plan)
+2026-04-30 | strategy | Sunbulah pitch angle: "compliance roadmap" not "compliance product"
+```
+
+### mmp
+
+```
+2026-04-30 | mmp | Defined: 3 sellable features in 15 working days
+2026-04-30 | mmp | Feature 1: Water Compliance Report PDF (5d) — n8n + PostgreSQL
+2026-04-30 | mmp | Feature 2: Threshold Alerts + Sensor Log (3d) — 12 thresholds + Telegram
+2026-04-30 | mmp | Feature 3: Saudi GAP Pre-Audit Checklist (7d) — interactive HTML on Vercel
+2026-04-30 | mmp | Target launch: 2026-06-05
+```
+
+### product
+
+```
+2026-04-30 | product | New product line: Energy-Aware Smart Greenhouse
+2026-04-30 | product | API integration with Inverter (Modbus/REST) mandatory for partner selection
+```
+
+### partners
+
+```
+2026-04-30 | partners | Need 2-3 NRRC-licensed solar partners in Western Region
+2026-04-30 | partners | Recommended brands: Deye/Sungrow/Solis (inverters), JA/Longi/Jinko (panels), Pylontech/BYD (batteries)
+2026-04-30 | partners | Subcontractor model: solar partner under iGarden as GC (10-15% commission)
+```
+
+### contracts
+
+```
+2026-04-30 | contracts | Old Sunbulah contract draft had payment math errors (30K total, 140K in payments) — superseded
+2026-04-30 | contracts | Phase-2 contract template needs: SLA, internet backup, software updates, data ownership
+```
 
 ---
 
