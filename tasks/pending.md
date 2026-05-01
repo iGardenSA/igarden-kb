@@ -12,17 +12,8 @@
 
 > ⚠️ هذه المهمة لا تنتظر — الـ tokens مكشوفة الآن (في تقارير محادثات + git history سابقة).
 
-- [ ] **Anthropic API key (`igarden-telegram-bot`)** — مكشوف في تقرير محادثة 2026-04-29
-  - Anthropic Console → Settings → API Keys → revoke
-  - أنشئ مفتاحاً جديداً
-  - حدّث n8n HTTP node credentials
-  - سجّل: `2026-04-?? | anthropic-api | key rotated [REDACTED]` في events.md
-- [ ] **Telegram Bot Token (`@igarden_sa_bot`)** — مكشوف في تقرير محادثة + git history
-  - BotFather → `/revoke`
-  - أعِد إصدار token جديد
-  - حدّث n8n Telegram credentials
-  - أعِد setWebhook
-  - سجّل: `2026-04-?? | telegram-bot | token rotated [REDACTED]` في events.md
+- [x] ~~**Anthropic API key (`igarden-telegram-bot`)**~~ ✅ ROTATED 2026-04-30
+- [x] ~~**Telegram Bot Token (`@igarden_sa_bot`)**~~ ✅ ROTATED 2026-04-30
 - [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history + chat report
   - `openssl rand -base64 32` لـ api key الجديد
   - `openssl rand -hex 16` لـ ota password الجديد
@@ -50,6 +41,104 @@
 > ⚠️ **n8n Encryption Key مكشوف أيضاً** — لكن **لا تدوّره** قبل re-encrypting كل credentials في n8n DB يدوياً (وإلّا ستفقد كل الـ credentials). قرار عمل لاحق.
 
 > 📌 بعد التدوير: حدّث `SECRETS.md.example` إذا تغيّرت سياسة، وقدّر الحاجة لـ `git filter-repo` لمسح history.
+
+### `secrets-incident` — إجراءات إضافية بعد التدوير
+
+- [ ] **T-SEC-004 — Paranoid sweep:** فحص شامل لـ git history للأسرار التي قد تكون فاتتنا
+  ```bash
+  # adapt patterns حسب الحاجة
+  git log --all -p | grep -iE "(password|secret|token|api[_-]?key|sk-ant-|ghp_|AIza)" | sort -u
+  # أو استخدم: trufflehog filesystem . أو gitleaks detect
+  ```
+- [ ] **T-SEC-007 — أنشئ `/incidents/2026-04-29-secrets-leak/`** بعد إكمال rotation:
+  - `disclosure.md` (الـ timeline من `secrets-incident` entity)
+  - `rotation-log.md` (سجل كل مفتاح تم تدويره)
+  - `postmortem.md` (السبب الجذري + الإجراءات الوقائية)
+- [ ] **T-SEC-008 — أنشئ `/security/`** للسياسات طويلة المدى:
+  - `access-matrix.md` (من يصل إلى ماذا)
+  - `secrets-inventory.md` (جرد كامل بدون قيم)
+  - `incident-response.md` (playbook لأيّ تسريب مستقبلي)
+
+### `master-doc` — تحديث v1.0 → v1.5 في Project Knowledge
+
+> ⚠️ Master Doc في Project Knowledge ما زال v1.0 — لا يحوي:
+> Timeline 2024-2025-2026، Tagline "ازرع بذكاء"، التموضع "ننفّذ · نُوطّن · نُطوّر"،
+> الركائز الثلاث، iGarden Tower داخل Hydroponics، عسفان (بدلاً من 5 محميات)،
+> ADRs T009-T014، Hybrid AI Architecture.
+
+> 🆕 **تحديث 2026-04-26 (BLOCK-010):** أُنتج Master Doc **v2.0** (2,684 سطر / 28 قسم) + Tech Appendix v3.0 — يستبدل خطّة v1.5.
+
+- [ ] **T-DOC-001:** رفع Master Doc v2.0 إلى Project Knowledge + حذف v1.0
+- [ ] **T-DOC-002:** رفع Tech Appendix v3.0 إلى Project Knowledge
+- [ ] **T-DOC-003:** رفع PROJECT_STATE.md (إن استمرّ كقناة موازية لـ events.md) أو حذفه إن استبدل كلياً
+
+### `gemini-gem` — تجهيز
+
+- [ ] **T-OPS-001:** لصق Gemini Gem Instructions v2.0 في صفحة الـ Gem (3 صيغ متاحة: TXT/MD/DOCX)
+
+### `meetings` — مكالمات واجتماعات الأسبوع 🔴
+
+- [ ] **T-MTG-001:** مكالمة محمد الكثيري — **الأحد** (لا تؤجَّل)
+- [ ] **T-MTG-002:** اتصال محاسب قانوني (GOSI) — الأحد/الإثنين
+- [ ] **T-MTG-003:** محادثة م. ريم — هذا الأسبوع
+- [ ] **T-MTG-004:** اجتماع شراكاتي ثلاثي — الخميس
+- [ ] **T-MTG-005:** استشارة محامي IP (تسجيل العلامة)
+- [ ] **T-MTG-006:** استشارة محامي عمل
+- [ ] **T-MTG-007:** جلسة مع سعيد لإغلاق الأرقام المالية
+- [ ] **T-MTG-008:** ملف الموظفين والرواتب (قادم منفصلاً)
+- [ ] **T-MTG-009:** ملف الاشتراكات الشهرية (قادم منفصلاً)
+
+### `briefs` — أسئلة معلَّقة
+
+- [ ] **T-DOC-004:** قرار الـ 3 Briefs — تحديث أم استخدام كما هي؟ (السؤال طُرح ولم يُجَب)
+
+### `ai-daily-routine` — تنفيذ الروتين اليومي (يبدأ 2026-05-02)
+
+**🔴 P0 — السبت 2026-05-02 (10 دقائق):**
+- [ ] **T-AI-001:** الاشتراك في Ben's Bites (https://bensbites.com) — بريد `info@igarden.sa`
+- [ ] **T-AI-002:** Anthropic News bookmark/RSS (https://www.anthropic.com/news)
+- [ ] **T-AI-003:** الاشتراك في The Rundown AI (https://www.therundown.ai)
+- [ ] **T-AI-004:** حفظ قالب الموجز اليومي في Notes أو KB
+- [ ] **T-AI-005:** اختبار المنبّه (21:00) ليلة السبت
+
+**🟡 P1 — خلال الأسبوع 2026-05-03 → 2026-05-08:**
+- [ ] **T-AI-006:** اختيار RSS reader (Feedly / Inoreader / Reeder) — اختياري
+- [ ] **T-AI-007:** أول 5 موجزات يومية (الأحد-الخميس)
+- [ ] **T-AI-008:** أول مراجعة أسبوعية الجمعة 2026-05-08
+
+**🟢 P2 — مراجعة 2026-05-16:**
+- [ ] **T-AI-009:** مراجعة تجربة الأسبوعين
+- [ ] **T-AI-010:** تصميم n8n workflow (RSS → Claude filter → Telegram + Drive)
+- [ ] **T-AI-011:** صياغة prompt الفلترة بالعربي (مبني على بيانات الأسبوعين)
+
+**🔵 P3 — مستقبلي:**
+- [ ] **T-AI-012:** PR تلقائي على repo `igarden-kb` للعناصر القابلة للتنفيذ
+- [ ] **T-AI-013:** mini-dashboard على `igarden.sa/internal/ai-radar`
+
+---
+
+### `week-2026-W18` — مهام الأسبوع (محفوظة 2026-04-30)
+
+- [ ] **T-WK-001 — Telegram Bot KB integration:** ربط البوت بقاعدة معرفة iGarden (System Prompt أو GitHub raw URLs)
+- [ ] **T-WK-002 — منصة المناقصات الحكومية:** بدء التسجيل/التصفح
+- [ ] **T-WK-003 — إقرار ZATCA:** قبل **31 مايو 2026** (deadline حرج)
+- [ ] **T-WK-004 — مراجعة Pitch سنبلة:** الجمعة 1 مايو 2026
+- [ ] **T-WK-005 — إصلاح locale warnings** على igarden-hub
+- [ ] **T-WK-006 — vision-hub:** إضافته لـ Tailscale + Cloudflare Tunnel
+- [ ] **T-WK-007 — متابعة Tailscale Trial:** 14 يوم من 2026-04-30 → ينتهي ~2026-05-14 — قرار: Free tier أم Pro؟
+
+### `info@igarden.sa` — Single Point of Failure 🟡
+
+- [ ] **T-SEC-009 — تخفيف خطر `info@igarden.sa` كنقطة فشل وحيدة**
+  - حالياً مرتبط بـ: GitHub، Vercel، Cloudflare، Anthropic، Anyone-with-recovery
+  - الخطر: اختراق هذا الإيميل = وصول كامل لكل الأنظمة
+  - الإجراءات المقترحة:
+    1. تفعيل 2FA قوي (hardware key أو authenticator)
+    2. إيميل recovery منفصل (مثل `recovery@igarden.sa`)
+    3. مراجعة دورية لـ "Connected apps" في Google Workspace
+    4. (اختياري) إيميلات منفصلة per-service: `billing@`, `tech@`, `ops@`
+
+---
 
 ### `vercel-account` — تجديد Vercel Pro Trial 🟡 P0/P1 حدودي
 
@@ -79,16 +168,12 @@
 
 ## 🟡 P1 — مهم (يحسّن الموثوقية أو السرعة)
 
-### `cloudflare-tunnel` / `dns` — حل دائم لـ webhook
-- [ ] **سكربت auto-update لـ webhook URL** عند كل restart cloudflared
-  - يقرأ URL الجديد من logs
-  - يحدّث `WEBHOOK_URL` في n8n
-  - يعيد setWebhook لـ Telegram
-- [ ] **DNS دائم** لـ `n8n.igarden.sa`
-  - الخيارات:
-    1. نقل nameservers من Vercel إلى Cloudflare (يكسر الموقع مؤقتاً)
-    2. subdomain على `pages.dev` كحل وسط
-    3. الإبقاء على trycloudflare + سكربت auto-update
+### ~~`cloudflare-tunnel` / `dns`~~ ✅ محلول 2026-04-30
+
+> **الحل المعتمد:** شراء domain جديد `igarden.work` ($8.20/سنة) على Cloudflare native DNS — تجنّب الحاجة لنقل nameservers `igarden.sa` من Vercel.
+> - `n8n.igarden.work` → `garden-hub:5678` (webhook ثابت)
+> - `api.igarden.work` → `garden-hub:8000` (للـ FastAPI لاحقاً)
+> - cloudflared الآن systemd service (ليس Docker)
 
 ### `n8n` — إكمال البنية
 - [ ] **MQTT credential** في n8n (يحرّر workflow Sensor Simulator)

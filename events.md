@@ -91,6 +91,8 @@
 2026-04-29 13:21 | secrets-incident | Leak disclosed during session; redaction applied to working tree only (commit f26c050) — git history STILL contains secrets
 2026-04-29 | secrets-incident | Anthropic API key 'igarden-telegram-bot' name (not value) mentioned in chat reports
 2026-04-29 | secrets-incident | Rotation status: PENDING — user deferred to "tomorrow"; no keys revoked yet
+2026-04-30 | secrets-incident | Rotation phase 1 DONE: Telegram bot token + Anthropic API key rotated — old credentials invalidated
+2026-04-30 | secrets-incident | Rotation phase 1 remaining: ESPHome keys (3) + PostgreSQL + Mosquitto + n8n basic auth + AP fallback (6 keys still to rotate)
 2026-04-29 | secrets-incident | Tools missing on host: git-filter-repo + bfg unavailable — full history scrub deferred
 ```
 
@@ -133,6 +135,7 @@
 2026-04-27 | website | Header tagline removed
 2026-04-27 | website | commit 1b7a9e5 — Logo green icon (supersedes white) + tagline removed from Header
 2026-04-27 | website | commit c28115e — sessionStorage adopted (replaced localStorage in demo)
+2026-04-30 | website | igarden.sa main site deployed on Production — verified live
 2026-04-27 | website | One-Liner card removed from Footer
 2026-04-27 | website | Subdomain policy adopted: demo / app / shop separated
 2026-04-27 | website | Bundle size: ~140KB (with logos)
@@ -256,6 +259,8 @@
 2026-04-29 | n8n | Second trycloudflare URL: https://picking-precise-powder-blades.trycloudflare.com
 2026-04-29 | n8n | Webhook URL temporary via trycloudflare (changes on restart)
 2026-04-29 | n8n | Telegram → Claude API → Reply workflow active (3 nodes)
+2026-04-30 | n8n | Webhook stable: n8n.igarden.work → garden-hub:5678 (no more trycloudflare URL changes)
+2026-04-30 | n8n | iGarden Telegram Bot @igarden_sa_bot fully operational
 ```
 
 ### telegram-bot
@@ -271,6 +276,7 @@
 2026-04-29 | telegram-bot | Activated via n8n + Claude API (claude-sonnet-4-5)
 2026-04-29 | telegram-bot | System prompt: Arabic iGarden assistant
 2026-04-29 | telegram-bot | Verified: receives Arabic messages and replies with iGarden context
+2026-04-30 | telegram-bot | Token ROTATED [REDACTED — see password manager] — old token (exposed in git history) revoked via BotFather
 ```
 
 ### anthropic-api
@@ -279,6 +285,7 @@
 2026-04-27 | anthropic-api | Balance snapshot: $24.00 of $28.75 original credit
 2026-04-29 | anthropic-api | New API key created: name "igarden-telegram-bot", workspace Default
 2026-04-29 | anthropic-api | Key stored in n8n HTTP node only (NOT in this repo)
+2026-04-30 | anthropic-api | Key ROTATED [REDACTED — see password manager] — old key (igarden-telegram-bot, mentioned in chat reports) disabled in Console
 ```
 
 ### vercel-account
@@ -314,6 +321,10 @@
 2026-04-29 | cloudflare-tunnel | DNS attempt failed: igarden.sa not selectable in Cloudflare Public Hostname dropdown (nameservers on Vercel)
 2026-04-29 | cloudflare-tunnel | Decision deferred: keep trycloudflare temp, plan permanent later
 2026-04-29 | cloudflare-tunnel | DNS pending: igarden.sa is on Vercel nameservers (not Cloudflare)
+2026-04-30 | cloudflare-tunnel | Permanent tunnel achieved via igarden.work domain (Cloudflare-native DNS) — supersedes trycloudflare temp solution
+2026-04-30 | cloudflare-tunnel | cloudflared running as systemd service on igarden-hub (not Docker container) — more reliable
+2026-04-30 | cloudflare-tunnel | NEW tunnel created for igarden.work: ID 960b1969-8ac9-4146-bf96-5998421536cf (supersedes 3942be75-... iGarden-cm5 tunnel from 2026-04-29)
+2026-04-30 | cloudflare-tunnel | Decision: Subdomain Delegation chosen over full DNS migration (igarden.sa stays on Vercel)
 ```
 
 ### dns-vercel
@@ -346,6 +357,90 @@
 2026-04-29 | termux | KB zip path discovered: /storage/emulated/0/Download/igarden_kb_v1/igarden_kb/
 2026-04-29 | termux | Failed approach: ssh-dss to legacy device (192.168.8.172) — algorithm not supported
 ```
+
+### tailnet
+
+```
+2026-04-29 | tailnet | Tailnet device map documented: hp-elitebook, ali-mobile, garden-hub, vision-hub, dell-osfan
+2026-04-29 | tailnet | Tailscale account decision: ali@igarden.sa
+2026-04-29 | tailnet | Hostname for laptop in Tailnet set: hp-elitebook
+2026-04-29 | tailnet | Setup order locked: laptop → Note 22 → CM5 → Pi 5
+2026-04-29 | tailnet | Shared layer composition adopted: Notion + Drive + GitHub + Tailscale + Claude Projects
+2026-04-30 | tailnet | Tailnet operational: hp-elitebook + igarden-hub + s24-ultra connected
+2026-04-30 | tailnet | Tailscale IPs assigned: hp-elitebook (100.98.152.19) + igarden-hub (100.125.96.50) + s24-ultra (100.69.11.105)
+2026-04-30 | tailnet | Account: info@igarden.sa — Trial 14 days
+2026-04-30 | tailnet | n8n accessible from mobile via Tailscale: igarden-hub:5678
+2026-04-30 | tailnet | SSH verified working over Tailnet: hp-elitebook ↔ igarden-hub
+```
+
+### igarden-work
+
+```
+2026-04-30 | igarden-work | Domain igarden.work registered on Cloudflare — $8.20/year
+2026-04-30 | igarden-work | DNS managed natively on Cloudflare (NOT Vercel — solves the DNS conflict for igarden.sa)
+2026-04-30 | igarden-work | n8n.igarden.work → garden-hub:5678 — accessible from internet
+2026-04-30 | igarden-work | api.igarden.work → garden-hub:8000 — ready (FastAPI Native eventual host)
+```
+
+
+### founder
+
+```
+2026-04-29 | founder | Daily workflow customization started: laptop ↔ Note 22 link
+2026-04-29 | founder | Full ecosystem map drawn: laptop + mobile + shared layer
+2026-04-29 | founder | Tailscale install commands for Linux Mint 22 received and ready to execute
+```
+
+### ai-daily-routine
+
+```
+2026-05-01 | ai-daily-routine | Strategic decision: Daily AI tools/updates research adopted as core daily routine
+2026-05-01 | ai-daily-routine | 3-layer system designed (sources → Claude filter → Telegram + KB archive)
+2026-05-01 | ai-daily-routine | Time slot fixed: 21:00 local (evening review before sleep)
+2026-05-01 | ai-daily-routine | Language locked: Arabic only
+2026-05-01 | ai-daily-routine | Sources locked (3 only): Ben's Bites + Anthropic News + The Rundown AI
+2026-05-01 | ai-daily-routine | Weekly cadence: Sun-Thu reading, Fri review, Sat rest
+2026-05-01 | ai-daily-routine | Phase 1 (manual) starts 2026-05-02
+2026-05-01 | ai-daily-routine | Phase 2 (n8n automation on CM5) scheduled review: 2026-05-16
+2026-05-01 | ai-daily-routine | Android alarm configured (21:00, daily 7 days/week)
+2026-05-01 | ai-daily-routine | Daily brief markdown template defined (5 sections)
+2026-05-01 | ai-daily-routine | KB archive path proposed: kb/ai-daily/YYYY-MM/DD.md
+```
+
+### hq-strategy
+
+```
+2026-04-24 | hq-strategy | HQ Strategy Session opened (48-hour intensive: 24-25 April)
+2026-04-25 | hq-strategy | CLAUDE.md v2.0 produced (758 lines, +56% from v1.x, 14 ADRs T001-T014, 6 new T009-T014)
+2026-04-25 | hq-strategy | README.md rebuilt (28 → 290 lines, Shields.io + Quick Start + Tech Stack)
+2026-04-25 | hq-strategy | CHANGELOG_CLAUDE_md.md created (v1.1 → v1.2 → v2.0 evolution)
+2026-04-25 | hq-strategy | iGarden_Web_Rebuild_Prompt.txt produced (274 lines — covers igarden.sa + shop + demo + product pages)
+2026-04-25 | hq-strategy | iGarden_Presentations_Prompt.txt produced (381 lines — 5 pitch types + 4 profile types)
+2026-04-25 | hq-strategy | iGarden_Gemini_Gem_Instructions produced (473 lines, .md + .txt)
+2026-04-25 | hq-strategy | PROJECT_STATE.md concept introduced (369 lines) — cross-conversation sync file
+2026-04-25 | hq-strategy | BLOCK-006 archive system proposed (16 sections for Master Command)
+2026-04-25 | hq-strategy | Hybrid AI architecture mapped: CM5 + Pi 5 + Dell + Mint roles distributed
+2026-04-25 | hq-strategy | Vision AI plan: Pi 5 + AI HAT + IMX500
+2026-04-25 | hq-strategy | Session closed; Master Doc still on v1.0 in Project KB (gap flagged for v1.5 build)
+2026-04-26 | hq-strategy | BLOCK-010 session (Master Doc v2.0 + Tech Appendix v3.0 rebuild) — compacted once
+2026-04-26 | hq-strategy | Master Doc v2.0 produced (2,684 lines / 28 sections) — supersedes earlier v1.5 plan
+2026-04-26 | hq-strategy | Tech Appendix v3.0 produced (17 sections / 14 ADRs T001-T014)
+2026-04-26 | hq-strategy | Gemini Gem Instructions v2.0 produced (3 formats: TXT/MD/DOCX)
+2026-04-26 | hq-strategy | Architecture regions expanded: 5 regions (was 3)
+2026-04-26 | hq-strategy | Master Doc Archive Policy adopted (permanent versioning policy)
+2026-04-26 | hq-strategy | v1.4 deleted by mistake → recovered → produced v2.0 better
+2026-04-29 | hq-strategy | PROJECT_STATE.md approach SUPERSEDED by events.md as Source of Truth (different mechanism, same purpose)
+```
+
+
+### pitch-deck
+
+```
+2026-04-25 | pitch-deck | Pitch Sunbolah v2.1 produced (16 slides, RTL clean, real logos, Brand Guidelines v1.0 compliant, Speaker Notes per slide)
+2026-04-25 | pitch-deck | Files: iGarden_Pitch_Sunbolah_v21.pptx (3 MB) + .pdf (546 KB)
+```
+
+
 
 ### pitch-deck
 
@@ -415,6 +510,9 @@
 ????-??-?? | igarden-company | 500K+ SAR cumulative revenue achieved
 ????-??-?? | igarden-company | 1,000+ active customers across multiple Saudi regions (definition pending)
 2025-??-?? | igarden-company | Agrofood 2025 Jeddah — official presence
+2026-04-26 | igarden-company | Partner name correction: "م. أيمن حسين المخزوم" (NOT "المخزومي") per MISA license #1490123 — mandatory across all docs
+2026-04-26 | igarden-company | Equity split confirmed: Ali 50% / Ayman 25% / Mohammed Al-Kuthayri 25%
+2026-04-26 | igarden-company | Trademark "iGarden" + "الحديقة الذكية" + Tagline NOT yet registered in SAIP — flagged P0 legal risk
 ```
 
 ### igarden-tower
@@ -456,6 +554,24 @@
 ????-??-?? | igarden-financials | SaaS gross margin: 80%+
 ????-??-?? | igarden-financials | Forecast: 2.4M (2026) / 6.9M (2027) / 12.5M (2028) SAR
 ????-??-?? | igarden-financials | Break-even projected: Q2 2027
+2026-04-26 | igarden-financials | CEO directive: 2026 = "low profitability" framing (NOT loss) — pending Saeed accountant verification
+2026-04-26 | igarden-financials | Sunbolah grant (150K SAR) classified as "potential, NOT guaranteed" — excluded from baseline budget
+2026-04-26 | igarden-financials | Sunbolah grant allocation plan (if approved): Smart Controllers 75K / Osfan 37.5K / Marketing 22.5K / Legal 15K
+2026-04-26 | igarden-financials | Subscriptions estimate: ~$130/month (~490 SAR) — detailed file pending
+2026-04-26 | igarden-financials | Hardware total spend: ~10,000 SAR (CM5 ~3,029 + Pi5 ~600 + AI HAT+ ~700 + IMX500 ~519 + accessories)
+2026-04-26 | igarden-financials | Forecast conflict flagged: Master v1.4 = 17.3M cumulative vs Pitch v2.3 = 21.8M — UNRESOLVED until Saeed session
+2026-04-26 | igarden-financials | Hardware regional pricing risk noted: 50-100% potential increase due to geopolitical conditions
+```
+
+### vision-hub
+
+```
+2026-04-26 | vision-hub | ADR T010 adopted: Pi 5 + AI HAT+ + IMX500 = separate architectural zone (NOT Garden Hub)
+2026-04-26 | vision-hub | Hardware: Pi 5 (8GB) + AI HAT+ (Hailo-8L 13 TOPS) + Sony IMX500 AI Camera
+2026-04-26 | vision-hub | Performance benchmarks: YOLOv8s 30+ FPS, YOLOv8n 60+ FPS on Hailo
+2026-04-26 | vision-hub | Plant disease detection: PlantVillage dataset — 14 plants × 38 disease classes, 94%+ accuracy
+2026-04-26 | vision-hub | Track A demo strategy: pre-recorded video (not live) for Sunbolah pitch — avoids hardware setup risk
+2026-04-26 | vision-hub | Expected hardware arrival: CM5 by 1-4 May, IMX500 by 1-8 May
 ```
 
 ### osfan-station
