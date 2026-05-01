@@ -1,8 +1,9 @@
 # 🧭 iGarden Knowledge Base — INDEX
 
-> **آخر تحديث:** 2026-04-29
-> **الإصدار:** v1.1
+> **آخر تحديث:** 2026-05-01
+> **الإصدار:** v1.2
 > **مبدأ الاستخدام:** ابدأ كل محادثة Claude بـ "اقرأ INDEX.md" → ستعرف الخريطة كاملة.
+> **Source of Truth:** Notion HQ (GitHub = backup أسبوعي) — انظر [`_meta/notion-hq.md`](./_meta/notion-hq.md)
 
 ---
 
@@ -28,7 +29,7 @@
 
 ## 📊 الحالة الحالية
 
-- ✅ **Knowledge Base** على GitHub: `iGardenSA/igarden-kb`
+- ✅ **Knowledge Base** على Notion HQ (Source of Truth) + GitHub (backup أسبوعي)
 - ✅ **Telegram Bot** شغّال: `@igarden_sa_bot`
 - ✅ **Cloudflare Tunnel** على CM5 (Healthy، DNS معلّق)
 - 🟡 **Smart OS Phase 3/5** — 208 unit tests passing — **Pause رسمي**
@@ -41,7 +42,8 @@
 ## 📁 خريطة الملفات
 
 ### 🧠 Core
-- [`events.md`](./events.md) — **🔥 Source of Truth** — سجل أحداث مرتّب زمنياً (آخر سطر = الحقيقة الحالية)
+- [`_meta/notion-hq.md`](./_meta/notion-hq.md) — **🔥 خريطة Notion HQ** — IDs + روابط كل قواعد البيانات
+- [`events.md`](./events.md) — سجل أحداث أرشيفي (Notion Events Timeline = النسخة الحية)
 - [`README.md`](./README.md) — كيف تستخدم الـ KB
 - [`SESSIONS.md`](./SESSIONS.md) — سجل جلسات سريع
 - [`INDEX.md`](./INDEX.md) — هذا الملف
@@ -106,10 +108,9 @@
 
 ## 🤖 كيف يستخدم Claude هذا الـ KB
 
-### في Claude.ai
-```
-"اقرأ https://raw.githubusercontent.com/iGardenSA/igarden-kb/main/INDEX.md"
-```
+### في Claude.ai (الأساسي)
+Claude يقرأ مباشرة من Notion عبر MCP — لا يحتاج GitHub URLs.
+راجع [`_meta/notion-hq.md`](./_meta/notion-hq.md) للـ Data Source IDs.
 
 ### في Claude Code (على CM5)
 ```bash
@@ -119,7 +120,7 @@ claude
 ```
 
 ### في Telegram Bot
-البوت يستفيد من Claude API + يقرأ الـ KB عبر raw GitHub URLs.
+البوت يستفيد من Claude API + يقرأ Notion عبر MCP أو raw GitHub URLs (backup).
 
 ---
 
