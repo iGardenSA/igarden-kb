@@ -14,12 +14,8 @@
 
 > ✅ **Anthropic API key + Telegram Bot Token مُدوَّران 2026-04-30** (راجع `events.md` تحت `anthropic-api` و `telegram-bot`)
 
-- [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history + chat report
-  - `openssl rand -base64 32` لـ api key الجديد
-  - `openssl rand -hex 16` لـ ota password الجديد
-  - حدّث `secrets.yaml` على Pi 5 العميل 002
-  - re-flash ESP32 بـ encryption key الجديد
-  - سجّل: `2026-04-?? | customer-002 | ESP32 api_encryption_key + ota_password rotated [REDACTED]`
+> 📌 **ESPHome rotation tracked in Notion** — execute during customer-002 site visit (راجع `events.md` تحت `notion` 2026-05-01)
+
 - [ ] **PostgreSQL password (CM5 — `igarden_data` / user `igarden`)** — مكشوف في chat report
   - `docker exec igarden-postgres psql -U postgres -c "ALTER USER igarden WITH PASSWORD '...';"`
   - حدّث n8n credentials لـ PostgreSQL

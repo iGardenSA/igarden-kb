@@ -114,6 +114,13 @@
 2026-04-29 | secrets-leak-warning | ESP32 AP fallback password exposed in chat report — [REDACTED] — ROTATE
 2026-04-29 | secrets-leak-warning | Customer-003 IBAN + tax ID + customer name exposed in chat report — moved to ~/igarden-secrets/
 2026-05-01 | secrets-leak-warning | Anthropic API key + Telegram bot token rotation verified complete (supersedes 2026-04-29 REDACT-only entry)
+2026-05-01 | secrets-leak-warning | ESPHome api_encryption_key + ota_password rotation deferred — scheduled in Notion (linked to next customer-002 site visit)
+```
+
+### notion
+
+```
+2026-05-01 | notion | ESPHome keys rotation task scheduled (customer-002, links: secrets-leak-warning + customer-002 P0 batch)
 ```
 
 ### github-repo
