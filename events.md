@@ -302,6 +302,19 @@
 2026-04-30 | telegram-bot | Token ROTATED [REDACTED — see password manager] — old token (exposed in git history) revoked via BotFather
 ```
 
+### telegram
+
+```
+2026-05-01 | telegram | P0: Block 1A+1B — Channel @igarden_sa setup + Workflow A
+2026-05-01 | telegram | P0: Block 2A — rotate exposed Telegram + Anthropic tokens
+2026-05-01 | telegram | P1: Block 3A — Workflow B weekly sensors report
+2026-05-01 | telegram | P1: Block 4A+4B — customer groups + routing
+2026-05-01 | telegram | P2: Block 5A+5B — bot roles + commands
+2026-05-01 | telegram | P2: Block 6A — Vision integration
+2026-05-01 | telegram | P2: Block 6B — MQTT bridge
+2026-05-01 | telegram | P3: Block 6C — stable webhook (replace trycloudflare)
+```
+
 ### anthropic-api
 
 ```
