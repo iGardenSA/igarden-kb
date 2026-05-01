@@ -1,6 +1,6 @@
 # 🗓️ جدول تدوير الأسرار — iGarden
 
-> **آخر تحديث:** 2026-04-29
+> **آخر تحديث:** 2026-05-01
 > **القاعدة:** عند إكمال أيّ بند → احذفه من هنا + أضف حدث في `events.md` بصيغة `YYYY-MM-DD | <entity> | <secret> rotated [REDACTED]`
 
 ---
@@ -166,27 +166,15 @@
 
 ---
 
-## 🧹 (اختياري) Git History Scrub
+## 🧹 Git History Scrub
 
-بعد إكمال rotation، يمكن مسح المفاتيح القديمة من history (لمنع scanning bots لاحقاً):
+~~بعد إكمال rotation، يمكن مسح المفاتيح القديمة من history (لمنع scanning bots لاحقاً).~~
 
-```bash
-pip install git-filter-repo
-cd ~/igarden-kb
+**✅ منجز — 2026-05-01:** تم تشغيل `git-filter-repo` على الـ branch `claude/fix-esphome-security-leak-uzMcA` وحُذفت القيم التالية من كامل الـ history:
+- `Lc5+NNXoaOu9y1/rpOA+odCGDjMzp3Zzy879af3tz7w=` → `[REDACTED_ESPHOME_API_KEY]`
+- `c21a718a835f2344623a8b2238540436` → `[REDACTED_ESPHOME_OTA_PWD]`
 
-# أنشئ ملف replacements.txt:
-cat > /tmp/replacements.txt <<'EOF'
-<TELEGRAM_TOKEN_OLD>==>[REDACTED]
-<ESPHOME_API_KEY_OLD>==>[REDACTED]
-<ESPHOME_OTA_PWD_OLD>==>[REDACTED]
-EOF
-
-git filter-repo --replace-text /tmp/replacements.txt --force
-git push --force origin claude/session-report-knowledge-base-l66cl
-```
-
-> ⚠️ Force-push يكسر forks/clones. إذا الـ repo ما زال شخصياً (لا forks)، آمن.
-> ⚠️ بعد التدوير، history scrub ليس ضرورياً — المفاتيح القديمة ميتة. هذه الخطوة "تنظيف فقط".
+> ⚠️ بعد merge الـ PR وقبول Force-push على main: كل من عنده clone قديم يحتاج `git fetch --all && git reset --hard origin/main`
 
 ---
 
