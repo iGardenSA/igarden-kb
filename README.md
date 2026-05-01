@@ -1,28 +1,56 @@
 # 🌱 iGarden Knowledge Base
 
 > **قاعدة معرفية مركزية لشركة iGarden — ازرع بذكاء**
-> **آخر تحديث:** 2026-04-29
+> **آخر تحديث:** 2026-05-01 (راجع `events.md` للحصول على آخر حدث فعلي بأيّ entity)
 > **مصدر الحقيقة:** [`events.md`](./events.md) — كل سطر = حدث بتاريخه الفعلي
 
 نظام معرفي حيّ يحفظ كل قرار، تركيب، عميل، وقرار تقني في شركة iGarden. الهدف: **عدم تكرار الشرح من الصفر في كل محادثة Claude جديدة**.
 
 ---
 
+## ⚠️ تحذير: الـ caching يمكن يخدعك
+
+محرّكات web fetch (Claude.ai، Gemini، إلخ) تخزّن نسخة من raw URLs لساعات أحياناً.
+**إذا قال أيّ AI "آخر تحديث X" وأنت تعرف أنه أحدث:**
+
+### 🔧 استخدم URL مع cache-buster
+
+```
+https://raw.githubusercontent.com/iGardenSA/igarden-kb/main/events.md?t=YYYYMMDDHH
+```
+بدّل `YYYYMMDDHH` بالساعة الحالية لإجبار fetch جديد.
+
+### 🔧 أو استخدم commit-pinned URL (الأقوى)
+
+```
+https://raw.githubusercontent.com/iGardenSA/igarden-kb/<commit-sha>/events.md
+```
+احصل على آخر sha من: https://github.com/iGardenSA/igarden-kb/commits/main
+
+### 🔧 أو اطلب من Claude صراحةً
+
+> "أعد تحميل https://raw.githubusercontent.com/iGardenSA/igarden-kb/main/events.md؟t=now وتجاهل أيّ نسخة قديمة"
+
+---
+
 ## 🚦 الحالة الحالية (snapshot)
 
-| العنصر | الحالة | المرجع |
+| العنصر | الحالة | تاريخ آخر تحديث |
 |---|---|---|
-| GitHub repo `iGardenSA/igarden-kb` | ✅ Public | — |
-| Claude يقرأ KB من URL مباشر | ✅ | راجع "كيفية الاستخدام" |
-| Google Drive sync يومي 22:00 | ✅ | عبر Termux + rclone + cron |
-| Claude Code v2.1.121 على CM5 | ✅ | [`infrastructure/cm5-hub.md`](./infrastructure/cm5-hub.md) |
-| n8n على CM5 (`192.168.8.102:5678`) | ✅ | [`infrastructure/cm5-hub.md`](./infrastructure/cm5-hub.md) |
-| Telegram Bot `@igarden_sa_bot` | ✅ شغّال | [`projects/telegram-bot.md`](./projects/telegram-bot.md) |
-| Cloudflare Tunnel `iGarden-cm5` | 🟡 Healthy لكن DNS معلّق | [`projects/cloudflare-tunnel.md`](./projects/cloudflare-tunnel.md) |
-| Event-Sourced KB (`events.md`) | ✅ معتمد كـ Source of Truth | [`events.md`](./events.md) |
-| العميل 002 (الغولاء) | 🟡 80% | [`customers/002-ghulah-lettuce.md`](./customers/002-ghulah-lettuce.md) |
-| العميل 003 (الأحساء) — عقد مضاعف | 🚨 ينتظر تحليل Opus 4.7 | [`customers/003-ahsa-rayana.md`](./customers/003-ahsa-rayana.md) |
-| iGarden Smart OS Native (FastAPI) | ⏸️ Pause | [`infrastructure/pi5-fastapi-native.md`](./infrastructure/pi5-fastapi-native.md) |
+| GitHub repo `iGardenSA/igarden-kb` | ✅ Public | 2026-04-28 |
+| Telegram Bot `@igarden_sa_bot` | ✅ شغّال عبر `n8n.igarden.work` | 2026-04-30 |
+| Anthropic API key + Telegram token | ✅ ROTATED 2026-04-30 | 2026-04-30 |
+| ESPHome keys rotation | 📌 محوَّلة لـ Notion (زيارة الغولاء) | 2026-05-01 |
+| Cloudflare Tunnel على `igarden.work` | ✅ دائم (systemd service) | 2026-04-30 |
+| Tailscale Tailnet (3/5 أجهزة) | ✅ شغّال | 2026-04-30 |
+| `igarden.sa` Production | ✅ منشور | 2026-04-30 |
+| AI Daily Routine (21:00 يومي) | ✅ معتمد | 2026-05-01 |
+| العميل 002 (الغولاء) | 🟡 85% — يحتاج زيارة موقعية | 2026-04-30 |
+| العميل 003 (الأحساء) — عقد مضاعف | 🚨 ينتظر تحليل Opus 4.7 | 2026-04-29 |
+| العميل 004 (بندر بن لادن) | 🟡 فرصة جديدة قيد التقييم | 2026-04-30 |
+| iGarden Smart OS Native (FastAPI) | ⏸️ Pause | 2026-04-27 |
+| ZATCA Q1 2026 deadline | ⏰ **2026-05-31** | — |
+| Sunbolah pitch review | ⏰ **2026-05-07** | — |
 
 > 🔍 **للحصول على آخر حالة لأي كيان:**
 > ```bash
