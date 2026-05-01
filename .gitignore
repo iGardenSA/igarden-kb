@@ -42,3 +42,5 @@ __pycache__/
 # rclone
 .rclone.conf
 rclone.conf
+.igarden-secrets-to-purge.txt
+.igarden-new-secrets-*.txt
