@@ -492,7 +492,142 @@
 2026-04-29 | pitch-deck | Page-by-page design review prompt completed
 ```
 
+### igarden-finance
 
+```
+2026-04-30 | igarden-finance | Financial statements 2025 completed (7 sheets: summary + P&L + balance + cashflow + payroll + monthly + notes)
+2026-04-30 | igarden-finance | Financial statements 2026 completed (5 sheets, linked to 2025 closing)
+2026-04-30 | igarden-finance | Q1 2026 bank statement analyzed: 158 transactions in 9 categories
+2026-04-30 | igarden-finance | Total revenue 2025: 250,041 SAR | Gross profit: 63,166 SAR (25% margin)
+2026-04-30 | igarden-finance | Net loss 2025: (20,102) SAR — submitted to ZATCA, normal for first operational year
+2026-04-30 | igarden-finance | Operating expenses 2025: 76,409 SAR | Depreciation: 4,744.45 SAR
+2026-04-30 | igarden-finance | Cost of revenue 2025: 186,876.51 SAR
+```
+
+### igarden-zakat
+
+```
+2026-04-30 | igarden-zakat | Zakat 2025 declaration submitted to ZATCA — ref 26001314256
+2026-04-30 | igarden-zakat | Zakat base: 82,012 SAR | Zakat due: 2,114.01 SAR | No penalties
+```
+
+### igarden-vat
+
+```
+2026-04-30 | igarden-vat | VAT Q1 2026 declaration submitted to ZATCA — net due 18,285.31 SAR
+2026-04-30 | igarden-vat | Q1 2026 actual sales (29 invoices): 177,613.72 + VAT 26,642.06 = 204,255.78 SAR
+2026-04-30 | igarden-vat | Q1 2026 actual purchases: 55,711.65 + VAT 8,356.75 = 64,068.40 SAR
+2026-04-30 | igarden-vat | Total ZATCA obligations Q2 2026: 20,399.32 SAR (18,285.31 VAT + 2,114.01 Zakat)
+```
+
+### project-fatima
+
+```
+2026-04-30 | project-fatima | Invoice value confirmed at 126,000 SAR (NOT 124,488 — diff was bank commissions)
+2026-04-30 | project-fatima | Project cost: 62,304 SAR (fiberglass 22,304 + structures 25,000 + labor 15,000)
+2026-04-30 | project-fatima | Treated as "projects-in-delivery" on 31/12/2025; revenue + VAT booked in 2026
+```
+
+### project-ghoula
+
+```
+2026-04-30 | project-ghoula | Project (customer Amira Al-Jamal) confirmed: 53,000 SAR incl. VAT — executed Q1 2026
+```
+
+### partnership-decision
+
+```
+2026-04-30 | partnership-decision | Partnership structure 50/25/25 (Ali / Mohammed / Ayman) approved — effective 1/4/2026
+2026-04-30 | partnership-decision | Equity-split methodology: 50% labor + 50% assets
+2026-04-30 | partnership-decision | Ali contribution (50,000): car 22,000 + molds 12,000 + samples 5,500 + goods 6,500 + tools 4,000
+2026-04-30 | partnership-decision | Mohammed contribution: 25,000 SAR cash (from original 100,000 capital)
+2026-04-30 | partnership-decision | Ayman contribution: 25,000 SAR — paid directly to Mohammed before partnership activation
+2026-04-30 | partnership-decision | Capital remains 100,000 SAR in commercial register (no change)
+2026-04-30 | partnership-decision | Mohammed remaining current account ~60,675 SAR — to be settled later from profits
+```
+
+### partner-salaries
+
+```
+2026-04-30 | partner-salaries | Ali + Ayman monthly salary: 3,000 SAR each (Mohammed unpaid) — effective 1/4/2026
+```
+
+### accounting-method
+
+```
+2026-04-30 | accounting-method | Approved Fatima project as "projects-in-delivery" 31/12/2025 — revenue + VAT booked in 2026
+2026-04-30 | accounting-method | Opening balance 1/4/2026 reconciled to 31/12/2025 closing
+```
+
+### balance-sheet-2025
+
+```
+2026-04-30 | balance-sheet-2025 | Total assets 120,030 | Total liabilities 40,132 | Equity (Mohammed) 79,898
+```
+
+### salary-register-2025
+
+```
+2026-04-30 | salary-register-2025 | Total salaries 2025: 23,200 SAR (Ayman 4,000 + Mohammed Al-Asad 12,000 + Anas 7,200)
+```
+
+### inventory-2025
+
+```
+2026-04-30 | inventory-2025 | Closing inventory 31/12/2025: 8,137.60 SAR (steel + plastic + cartons + chemicals + supplies)
+```
+
+### gosi-alert
+
+```
+2026-04-30 | gosi-alert | Legal alert: company NOT registered in GOSI — must register retroactively before partnership activation
+```
+
+### regulatory-pending
+
+```
+2026-04-30 | regulatory-pending | Pending regulatory tasks: GOSI, Mudad, Qiwa, CR update (50/25/25 partners), notarized partnership contract, employment contracts, Ejar lease registration
+```
+
+### future-system
+
+```
+2026-04-30 | future-system | Adopted Qoyod (قيود) as daily accounting system — supports Rajhi-Business integration + ZATCA Phase 2
+```
+
+### team-expansion
+
+```
+2026-04-30 | team-expansion | Abdullah assigned: daily invoice intake + data entry into Qoyod
+```
+
+### customer-004
+
+```
+2026-04-30 | customer-004 | Initial meeting with Bandar Tariq Bin Laden (Modern Foods Trading Co.) and father Tariq
+2026-04-30 | customer-004 | Potential scopes: 7×8m greenhouse + barley sprouting room + 30 kW solar + restaurant greenhouse
+2026-04-30 | customer-004 | Assessment: serious but unclear — needs financial-commitment test before time investment
+2026-04-30 | customer-004 | Strategic priority: barley sprouting room + referral network (NOT first big project)
+```
+
+### partnership-kamal
+
+```
+2026-04-30 | partnership-kamal | Kamal Al-Shajri (Yemeni engineer, greenhouse contractor) — written 10-15% commission agreement required before any joint project
+```
+
+### installment-request
+
+```
+2026-04-30 | installment-request | VAT installment letter prepared (18,285.31 SAR) — justified by operational obligations + startup-phase burden
+2026-04-30 | installment-request | Submission scheduled: 2026-05-01 via ZATCA portal (with Rajhi Q1 statement attachment)
+```
+
+### kb
+
+```
+2026-04-30 | kb | Major financial-session expansion: 33 events, customers/004-binladen.md, partnerships/kamal-shajri.md, infrastructure/gosi-mudad-qiwa.md, decisions/2026-04-30-partnership.md added
+```
 
 ---
 
