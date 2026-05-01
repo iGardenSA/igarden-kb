@@ -176,9 +176,9 @@ cd ~/igarden-kb
 
 # أنشئ ملف replacements.txt:
 cat > /tmp/replacements.txt <<'EOF'
-7798622043:AAHS7XMWvXzrpTvpNrqB4ELKee__ucG85lE==>[REDACTED]
-Lc5+NNXoaOu9y1/rpOA+odCGDjMzp3Zzy879af3tz7w===>[REDACTED]
-c21a718a835f2344623a8b2238540436==>[REDACTED]
+<TELEGRAM_TOKEN_OLD>==>[REDACTED]
+<ESPHOME_API_KEY_OLD>==>[REDACTED]
+<ESPHOME_OTA_PWD_OLD>==>[REDACTED]
 EOF
 
 git filter-repo --replace-text /tmp/replacements.txt --force
