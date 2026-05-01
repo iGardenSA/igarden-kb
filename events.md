@@ -627,6 +627,84 @@
 
 ```
 2026-04-30 | kb | Major financial-session expansion: 33 events, customers/004-binladen.md, partnerships/kamal-shajri.md, infrastructure/gosi-mudad-qiwa.md, decisions/2026-04-30-partnership.md added
+2026-04-30 | kb | Major correction batch applied to customer-002 (identity, location, contract value, system specs)
+2026-04-30 | kb | Recommend creating _meta/entities-glossary.md to prevent name drift
+2026-04-30 | kb | _meta/entities-glossary.md created (glossary of canonical entity names)
+```
+
+### customer-002 (corrections + enrichment 2026-04-30)
+
+```
+2026-04-30 | customer-002 | CORRECTION: customer name = Najat Ali Hassan Hanbouli (NOT "Aljawhara Alqahtani" — earlier assumption wrong)
+2026-04-30 | customer-002 | National ID: 109960229
+2026-04-30 | customer-002 | CORRECTION: site = Huda Al-Sham, NW Jeddah, Makkah region (NOT Ahsa)
+2026-04-30 | customer-002 | Greenhouse spec: 40m × 9m × 3.2m = 360 m², single arched cooled (height 3.2m supersedes 3.5m draft)
+2026-04-30 | customer-002 | CORRECTION: contract value = 75,900 SAR incl. VAT (supersedes 30,000 logged earlier)
+2026-04-30 | customer-002 | Breakdown: 19K greenhouse + 27K hydroponics + 10K smart + 10K maintenance + 9.9K VAT
+2026-04-30 | customer-002 | System type: Raft DWC, 7,000 seedling capacity
+2026-04-30 | customer-002 | Troughs: 2 × 30m × 4m × 20cm = 240 m³ water volume
+2026-04-30 | customer-002 | Cooling: Italian 1.5HP × 2 fans, 45,000 m³/h (supersedes "Chinese fans" assumption)
+2026-04-30 | customer-002 | CORRECTION: payment schedule = 50/20/20/10 (supersedes 40/25/25/10)
+2026-04-30 | customer-002 | Warranty: 10y structure, 1y electronics, 3-month full maintenance
+2026-04-30 | customer-002 | Bank: Al Rajhi acct 618000010006086484051 / IBAN SA0680000618608016484051
+2026-04-30 | customer-002 | Daily power: 38-60 kWh summer, 20-30 kWh winter
+2026-04-30 | customer-002 | Air pumps add 24/7 base load ~1 kW continuous (Raft requirement — sizes battery bank)
+2026-04-30 | customer-002 | Phase-2 reference price: 75,900 SAR per identical greenhouse (×4 = 276-301K supersedes 362-387K estimate)
+2026-04-30 | customer-002 | CORRECTION: contracting entity = iGarden ("Rukn Al-Hadeeqah Al-Thakiyah" was a drafting error)
+2026-04-30 | customer-002 | Latest contract version received (Drive ID: 1XQa1M2sgpQN_Cxj_r5tkXAPdLH7GEzs9_2m_ihDp_WE) — supersedes old draft 1oG...
+2026-04-30 | customer-002 | Completion: 85% (supersedes 80% from 2026-04-27)
+2026-04-30 | customer-002 | New requirement: site lacks grid power — solar solution needed
+```
+
+### sunbulah
+
+```
+2026-04-30 | sunbulah | Identity confirmed: sunbulah = customer-002 (Najat Hanbouli) — NOT a separate customer
+2026-04-30 | sunbulah | May 7 pitch reframed as Phase-2 expansion offer (not intro pitch)
+2026-04-30 | sunbulah | Compliance dashboard mockup created (igarden-compliance-dashboard.html)
+2026-04-30 | sunbulah | Solar RFQ created with 3 options (iGarden-Solar-RFQ-2026.docx)
+2026-04-30 | sunbulah | Comparison cheat-sheet created (iGarden-Solar-Comparison-Sheet.html)
+```
+
+### strategy
+
+```
+2026-04-30 | strategy | MEWA enforcement trends mapped: 5 strategic opportunities identified
+2026-04-30 | strategy | Positioning shift: IoT vendor → Smart Energy & Compliance Integrator
+2026-04-30 | strategy | Approach decided: Proof-First → Positioning → MMP (60-day plan)
+2026-04-30 | strategy | Sunbulah pitch angle: "compliance roadmap" not "compliance product"
+```
+
+### mmp
+
+```
+2026-04-30 | mmp | Defined: 3 sellable features in 15 working days
+2026-04-30 | mmp | Feature 1: Water Compliance Report PDF (5d) — n8n + PostgreSQL
+2026-04-30 | mmp | Feature 2: Threshold Alerts + Sensor Log (3d) — 12 thresholds + Telegram
+2026-04-30 | mmp | Feature 3: Saudi GAP Pre-Audit Checklist (7d) — interactive HTML on Vercel
+2026-04-30 | mmp | Target launch: 2026-06-05
+```
+
+### product
+
+```
+2026-04-30 | product | New product line: Energy-Aware Smart Greenhouse
+2026-04-30 | product | API integration with Inverter (Modbus/REST) mandatory for partner selection
+```
+
+### partners
+
+```
+2026-04-30 | partners | Need 2-3 NRRC-licensed solar partners in Western Region
+2026-04-30 | partners | Recommended brands: Deye/Sungrow/Solis (inverters), JA/Longi/Jinko (panels), Pylontech/BYD (batteries)
+2026-04-30 | partners | Subcontractor model: solar partner under iGarden as GC (10-15% commission)
+```
+
+### contracts
+
+```
+2026-04-30 | contracts | Old Sunbulah contract draft had payment math errors (30K total, 140K in payments) — superseded
+2026-04-30 | contracts | Phase-2 contract template needs: SLA, internet backup, software updates, data ownership
 ```
 
 ---

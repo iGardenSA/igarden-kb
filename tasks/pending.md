@@ -3,10 +3,25 @@
 > **آخر تحديث:** 2026-04-30
 > **الصيغة:** كل مهمة لها priority + entity مرتبط + سياق مختصر + ربط بـ events.md
 > **المبدأ:** إذا اكتملت مهمة → تُحذف من هنا + تُضاف كحدث في events.md
+> **الاستراتيجية الناظمة:** Proof-First → Positioning → MMP — راجع [`../decisions/2026-04-30-strategy-pivot.md`](../decisions/2026-04-30-strategy-pivot.md)
 
 ---
 
-## 🔴 P0 — حرج (يوقف الإنتاج أو الميدان)
+## 📅 الجدول الزمني للأسبوع الأول
+
+| اليوم | المهمة الرئيسية |
+|---|---|
+| الجمعة 1 مايو | KB sync + رفع خطاب التقسيط + تدوير الـ tokens + بدء أعمال customer-002 |
+| السبت 2 مايو | معايرة pH + إرسال Solar RFQ |
+| الأحد 3 مايو | حل TDS UART + متابعة سعيد على ZATCA |
+| الإثنين 4 مايو | توسيع SD card |
+| الثلاثاء 5 مايو | حل شاشة اللمس + تجهيز مواد سنبلة |
+| الأربعاء 6 مايو | البروفة النهائية للعرض |
+| الخميس 7 مايو | ⭐ **عرض سنبلة (Phase-2 expansion offer)** |
+
+---
+
+## 🔴 P0 — يبدأ 2026-05-01 (هذا الأسبوع)
 
 ### `installment-request` — رفع خطاب تقسيط VAT Q1 2026 ⏰ **2026-05-01**
 
@@ -19,225 +34,150 @@
 - [ ] تأكيد التعهد + التسليم
 - [ ] تسجيل: `2026-05-01 | installment-request | letter submitted to ZATCA — schedule [...]`
 
-### `gosi` — تسجيل المنشأة في التأمينات الاجتماعية 🚨 **قبل تفعيل الشراكة**
+### `secrets-leak` — تدوير الـ tokens المسرَّبة 🚨 **فوراً**
 
-> ⚠️ راجع `infrastructure/gosi-mudad-qiwa.md` — التزام قانوني لا يحتمل التأجيل
+> راجع تفاصيل خطوات التدوير في [`SECRETS.md.example`](../SECRETS.md.example)
 
-- [ ] تسجيل المنشأة في GOSI بأثر رجعي
-- [ ] تسجيل الموظفين: علي، أيمن، محمد الأسد، أنس
-- [ ] الاشتراك: ~22% من إجمالي الرواتب
-- [ ] تسجيل: `2026-??-?? | gosi-alert | company registered in GOSI`
+- [ ] **Anthropic API key** (`igarden-telegram-bot`) — Anthropic Console → revoke + إعادة إصدار + تحديث n8n
+- [ ] **Telegram Bot Token** (`@igarden_sa_bot`) — BotFather `/revoke` + إعادة إصدار + setWebhook
+- [ ] **ESPHome `api_encryption_key` + `ota_password`** (customer-002) — re-flash ESP32
+- [ ] **PostgreSQL password** (CM5) + تحديث n8n credential
+- [ ] **Mosquitto password** (`igarden-sensors`) + re-flash ESP32
+- [ ] **n8n Basic Auth password**
+- [ ] **ESP32 AP fallback password**
 
-### `partnership-activation` — توثيق الشراكة الجديدة 50/25/25
+> ⚠️ **n8n Encryption Key** مكشوف لكن **لا تدوّره** قبل re-encrypting credentials في n8n DB يدوياً.
 
-> 🔗 راجع `decisions/2026-04-30-partnership.md`
+### `customer-002` — إكمال 15% المتبقي
 
-- [ ] تحديث السجل التجاري بأسماء الشركاء الجدد + النسب (دون تغيير رأس المال 100,000)
-- [ ] صياغة + توثيق عقد الشراكة لدى الكاتب العدل (50% عمل + 50% أصول + توزيع الأرباح + فض النزاعات)
-- [ ] صياغة عقود عمل رسمية (الموظفين + الشركاء العاملين)
-- [ ] تسجيل في **مدد** + ربط ملفات الرواتب الشهرية (6,000 ريال للشركاء)
-- [ ] تحديث ملف المنشأة في **قوى** + الالتزام بنطاقات السعودة
-- [ ] توثيق عقد الإيجار على نظام **إيجار**
+> 🔗 راجع [`../customers/002-ghulah-lettuce.md`](../customers/002-ghulah-lettuce.md)
 
-### `secrets-leak-warning` — تدوير الـ tokens المسرَّبة 🚨 **فوراً**
-
-> ⚠️ هذه المهمة لا تنتظر — الـ tokens مكشوفة الآن (في تقارير محادثات + git history سابقة).
-
-- [ ] **Anthropic API key (`igarden-telegram-bot`)** — مكشوف في تقرير محادثة 2026-04-29
-  - Anthropic Console → Settings → API Keys → revoke
-  - أنشئ مفتاحاً جديداً
-  - حدّث n8n HTTP node credentials
-  - سجّل: `2026-04-?? | anthropic-api | key rotated [REDACTED]` في events.md
-- [ ] **Telegram Bot Token (`@igarden_sa_bot`)** — مكشوف في تقرير محادثة + git history
-  - BotFather → `/revoke`
-  - أعِد إصدار token جديد
-  - حدّث n8n Telegram credentials
-  - أعِد setWebhook
-  - سجّل: `2026-04-?? | telegram-bot | token rotated [REDACTED]` في events.md
-- [ ] **ESPHome `api_encryption_key` + `ota_password`** (للعميل 002) — مكشوفان في git history + chat report
-  - `openssl rand -base64 32` لـ api key الجديد
-  - `openssl rand -hex 16` لـ ota password الجديد
-  - حدّث `secrets.yaml` على Pi 5 العميل 002
-  - re-flash ESP32 بـ encryption key الجديد
-  - سجّل: `2026-04-?? | customer-002 | ESP32 api_encryption_key + ota_password rotated [REDACTED]`
-- [ ] **PostgreSQL password (CM5 — `igarden_data` / user `igarden`)** — مكشوف في chat report
-  - `docker exec igarden-postgres psql -U postgres -c "ALTER USER igarden WITH PASSWORD '...';"`
-  - حدّث n8n credentials لـ PostgreSQL
-  - سجّل: `2026-04-?? | cm5 | PostgreSQL password rotated [REDACTED]`
-- [ ] **Mosquitto password (`igarden-sensors`)** — مكشوف في chat report
-  - تحديث `/etc/mosquitto/passwd` على CM5
-  - تحديث n8n MQTT credential
-  - تحديث ESP32 firmware (re-flash) — يمسّ كل الأجهزة المتصلة بـ Mosquitto
-  - سجّل: `2026-04-?? | cm5 | Mosquitto password rotated [REDACTED]`
-- [ ] **n8n Basic Auth password** — مكشوف في chat report
-  - تحديث `N8N_BASIC_AUTH_PASSWORD` env في n8n container + restart
-  - سجّل: `2026-04-?? | n8n | Basic Auth password rotated [REDACTED]`
-- [ ] **ESP32 AP fallback password** — مكشوف في chat report
-  - `openssl rand -base64 12`
-  - تحديث `secrets.yaml` على Pi 5 العميل 002
-  - re-flash ESP32
-  - سجّل: `2026-04-?? | customer-002 | ESP32 AP fallback password rotated [REDACTED]`
-
-> ⚠️ **n8n Encryption Key مكشوف أيضاً** — لكن **لا تدوّره** قبل re-encrypting كل credentials في n8n DB يدوياً (وإلّا ستفقد كل الـ credentials). قرار عمل لاحق.
-
-> 📌 بعد التدوير: حدّث `SECRETS.md.example` إذا تغيّرت سياسة، وقدّر الحاجة لـ `git filter-repo` لمسح history.
-
-### `vercel-account` — تجديد Vercel Pro Trial 🟡 P0/P1 حدودي
-
-> ⏰ **deadline: 2026-05-07** — اليوم 2026-04-29، باقي ~8 أيام.
-
-- [ ] قرار: ترقية إلى Pro paid plan ($20/شهر) أم العودة لـ Hobby (مجاني)؟
-- [ ] إذا Hobby: نقل demo.igarden.sa + igarden.sa إلى free tier (يفقد بعض ميزات Pro)
-- [ ] إذا Pro: تفعيل بطاقة دفع، تأكيد billing email = info@igarden.sa
-- [ ] /schedule reminder agent مُعدّ ليفحص يوم 2026-05-05
-
-### `customer-002` — إكمال الغولاء قبل الذهاب للأحساء
 - [ ] **معايرة pH** بمحاليل قياسية 4.0 + 7.0
-- [ ] **حل قراءة TDS UART** (BA.012 protocol غير محسوم)
-- [ ] **شاشة اللمس + USB devices** (Wayland/cage لا يلتقط input)
-- [ ] **توسيع SD من 16GB → 64GB** (SD ممتلئة 99%)
+- [ ] **حل قراءة TDS UART** (BA.012 protocol — baud rate + frame format)
+- [ ] **توسيع SD 16GB → 64GB** (ممتلئة 99%)
+- [ ] **حل شاشة اللمس + USB devices** (Wayland/cage)
 
-### `customer-003` — عقد الأحساء المضاعف
-- [ ] **قراءة العقد الجديد بـ Opus 4.7** ومقارنته بالأصلي
-- [ ] **تحديث BOM + الميزانية** (احتمال تضاعف القيمة إلى ~124,200 ريال)
-- [ ] **تحديث الجدول الزمني** بناءً على المضاعفة
+### `zatca` — موعد 31 مايو 2026
 
-### `pi5-fastapi` — تأكيد الـ IP
-- [ ] **SSH للجهاز** + `hostname` + `ip a` لتأكيد IP الفعلي
-- [ ] حل تعارض ظاهري مع `pi5-ghulah` (نفس IP `192.168.8.235`)
+- [ ] إكمال tax return 2025 (القوائم المالية الرسمية)
+- [ ] تسليم للمحاسب القانوني + سعيد
+- [ ] طلب من سعيد: صورة من إقرار VAT Q1 2026 المعتمد + سند سداد الزكاة (2,114.01 ريال) + رقم مرجعي تأكيدي
+
+### `sunbulah` — تحضيرات قبل 7 مايو ⭐
+
+> 🔗 العرض = Phase-2 expansion offer (NOT intro pitch). راجع [`../decisions/2026-04-30-strategy-pivot.md`](../decisions/2026-04-30-strategy-pivot.md)
+
+- [ ] طباعة Compliance Dashboard على A3 ملوّن (3 نسخ)
+- [ ] فيديو خميس مشيط (60 ثانية) — Case Study
+- [ ] أرقام عميل 001 على ورقة A4
+- [ ] قراءة عقد customer-002 المُحدّث بـ Opus 4.7
+
+### `gosi` + `partnership-activation` — نظامي قبل تفعيل الشراكة
+
+> 🔗 راجع [`../infrastructure/gosi-mudad-qiwa.md`](../infrastructure/gosi-mudad-qiwa.md) + [`../decisions/2026-04-30-partnership.md`](../decisions/2026-04-30-partnership.md)
+
+- [ ] تسجيل المنشأة في GOSI بأثر رجعي + الموظفين (علي، أيمن، محمد الأسد، أنس)
+- [ ] تحديث السجل التجاري بالشركاء الجدد (50/25/25 — رأس المال 100,000 يبقى كما هو)
+- [ ] صياغة + توثيق عقد الشراكة لدى الكاتب العدل
+- [ ] تسجيل في **مدد** + ربط ملفات الرواتب
+- [ ] تحديث ملف **قوى** + الالتزام بنطاقات السعودة
+- [ ] عقود عمل رسمية (الموظفون + الشركاء العاملون)
+- [ ] توثيق عقد الإيجار على نظام **إيجار**
 
 ---
 
-## 🟡 P1 — مهم (يحسّن الموثوقية أو السرعة)
+## 🟡 P1 — أسبوعين (8 – 14 مايو)
 
-### `customer-004` — متابعة فرصة بندر بن لادن
+### `solar-rfq` — عروض الطاقة الشمسية لـ customer-002
 
-> 🔗 راجع `customers/004-binladen.md`
+> 🔗 راجع [`../projects/solar-rfq-2026-05.md`](../projects/solar-rfq-2026-05.md)
 
-- [ ] إعداد عرض احترافي PDF بالخيارات الثلاثة (محمية 7×8 + استنبات شعير + طاقة شمسية 30ك.و)
-- [ ] 3 مقترحات سعرية واضحة (الاستنبات: 30-80 ألف نطاق أولي)
-- [ ] طلب دفعة دراسة/تصميم لاختبار التزام العميل قبل أي تصور تفصيلي
+- [ ] البحث عن 3-5 شركات NRRC-licensed في الغربية
+- [ ] إرسال RFQ + Comparison Sheet
+- [ ] متابعة استلام العروض (مهلة 14 يوم)
+- [ ] جدولة زيارات ميدانية
+- [ ] اختيار شريك + توقيع Subcontractor Agreement (10-15% commission + API access)
+
+### `master-image` — Pi5 v1.0
+
+- [ ] أخذ Master Image من customer-002 بعد الإكمال
+- [ ] رفع Google Drive + External SSD
+- [ ] سكربت `customize-pi.sh` لتخصيص hostname + secrets
+- [ ] قالب `templates/zone-template.yaml`
+
+### `n8n` — إكمال البنية
+
+- [ ] MQTT credential
+- [ ] أول Execute Workflow E2E (Mosquitto → n8n → PostgreSQL)
+- [ ] Schema migrations لـ `sensor_readings` hypertable
+- [ ] PostgreSQL backups → Google Drive يومياً
+
+### `customer-004` — فرصة بندر بن لادن
+
+> 🔗 راجع [`../customers/004-binladen.md`](../customers/004-binladen.md)
+
+- [ ] إعداد عرض احترافي PDF (محمية 7×8 + استنبات شعير + طاقة شمسية 30ك.و)
+- [ ] طلب دفعة دراسة/تصميم لاختبار الالتزام
 - [ ] جدولة زيارة المقر
 
-### `partnership-kamal` — اتفاقية مكتوبة مع كمال الشجري
+### `partnership-kamal` — اتفاقية مكتوبة
 
-> 🔗 راجع `partnerships/kamal-shajri.md` — مطلوب قبل أي تنفيذ مشترك (خاصة لـ بن لادن)
+> 🔗 راجع [`../partnerships/kamal-shajri.md`](../partnerships/kamal-shajri.md)
 
 - [ ] صياغة الاتفاقية: عمولة إحالة 10-15% + أجور تركيب منفصلة + بند عدم تجاوز
-- [ ] توقيع قبل بدء أي مشروع تنفيذي مشترك
+- [ ] توقيع قبل بدء أي مشروع تنفيذي مشترك (خاصة بن لادن)
 
-### `pitch-sunbolah` — مراجعة عرض سنبلة قبل 2026-05-07
-
-- [ ] مراجعة pitch بعقل صافٍ
-- [ ] الحسم في تعارضات SAM/SOM (راجع `pitch-deck` events)
-- [ ] حسم placeholder "م. قائد التطوير الرقمي" (S11)
-- [ ] تصحيح ألقاب أيمن + محمد في slide الفريق
-
-### `qoyod` — تنفيذ تحول النظام المحاسبي
+### `qoyod` — تحول النظام المحاسبي
 
 > 🔗 قرار: اعتماد Qoyod كنظام يومي (راجع `future-system` events)
 
-- [ ] فتح حساب Qoyod (~99 ريال/شهر للباقة الأساسية)
-- [ ] ربط بنك الراجحي للأعمال
-- [ ] ربط ZATCA Phase 2
-- [ ] تأهيل عبدالله: تدريب على استلام + إدخال الفواتير يومياً
-- [ ] جدولة مراجعة شهرية مع سعيد (بدلاً من مراجعة سنوية)
-- [ ] تقييم الحاجة لمحاسب جزئي (يوم/أسبوع)
-
-### `igarden-finance` — متابعة سعيد على الإقرارات
-
-- [ ] طلب صورة من إقرار VAT Q1 2026 المعتمد
-- [ ] طلب سند سداد الزكاة (2,114.01 ريال)
-- [ ] طلب رقم مرجعي تأكيدي للإقرارات
-
-### `igarden-finance` — تقديم القوائم المالية 2025 لـ ZATCA ⏰ **2026-05-31**
-
-- [ ] التقديم الرسمي للقوائم المالية 2025 (الموعد النهائي: نهاية مايو 2026)
-
-### `cloudflare-tunnel` / `dns` — حل دائم لـ webhook
-- [ ] **سكربت auto-update لـ webhook URL** عند كل restart cloudflared
-  - يقرأ URL الجديد من logs
-  - يحدّث `WEBHOOK_URL` في n8n
-  - يعيد setWebhook لـ Telegram
-- [ ] **DNS دائم** لـ `n8n.igarden.sa`
-  - الخيارات:
-    1. نقل nameservers من Vercel إلى Cloudflare (يكسر الموقع مؤقتاً)
-    2. subdomain على `pages.dev` كحل وسط
-    3. الإبقاء على trycloudflare + سكربت auto-update
-
-### `n8n` — إكمال البنية
-- [ ] **MQTT credential** في n8n (يحرّر workflow Sensor Simulator)
-- [ ] **Execute Workflow الأول** end-to-end (Mosquitto → n8n → PostgreSQL)
-- [ ] **Schema migrations** للـ `sensor_readings` hypertable
-- [ ] **Backups دورية** لـ PostgreSQL → Google Drive
-
-### `customer-002` — Master Image
-- [ ] **أخذ Master Image v1.0** بعد إكمال جميع P0 لعميل 002
-- [ ] **رفع على Google Drive** + نسخة على External SSD
-- [ ] **سكربت `customize-pi.sh`** لتخصيص hostname + secrets
-- [ ] **`templates/zone-template.yaml`** قابل للنسخ
+- [ ] فتح حساب Qoyod (~99 ريال/شهر)
+- [ ] ربط بنك الراجحي للأعمال + ZATCA Phase 2
+- [ ] تأهيل عبدالله: تدريب على إدخال الفواتير يومياً
+- [ ] جدولة مراجعة شهرية مع سعيد
 
 ---
 
-## 🟢 P2 — مفيد (يضيف ميزة لكن غير ضاغط)
+## 🟢 P2 — 22 مايو → 5 يونيو (MMP)
 
-### `kb` — هيكل التجارب
-- [ ] بناء هيكل `osfan-station/experiments/`
-- [ ] قالب `EXP-XXX.md` لكل تجربة
-- [ ] قنوات إدخال: Claude Web، Telegram Bot، MQTT، Vision AI
+> Minimum Marketable Product — 3 features في 15 يوم عمل
+> 🔗 راجع `mmp` في events.md + [`../decisions/2026-04-30-strategy-pivot.md`](../decisions/2026-04-30-strategy-pivot.md)
 
-### `telegram-bot` — تعميق
-- [ ] **Multi-user routing** (علي/أيمن/عكاش/عبدالله — صلاحيات مختلفة)
-- [ ] **Vision** — استقبال صور النباتات → Claude Vision → KB
-- [ ] **MQTT bridge** — البوت يستعلم عن حالة الحساسات الحيّة
+### `mmp-feature-1` — Water Compliance Report PDF (5 أيام)
 
-### `whatsapp-bot` — بعد استقرار Telegram
-- [ ] حساب WhatsApp Business
-- [ ] webhook + n8n integration
-- [ ] نفس الـ workflow (Claude API)
+- [ ] PDF template (مبني على dashboard.html)
+- [ ] n8n workflow: PostgreSQL → KPIs → PDF
+- [ ] إرسال تلقائي Telegram + Email
+- [ ] اختبار على بيانات customer-002 + توقيع SHA256
 
-### `pi5-ghulah` — تحسينات
-- [ ] توصيل Level Transmitter QDY30A (نسخة 0-3.3V)
-- [ ] NVMe HAT + SSD للموثوقية
-- [ ] Cloudflare Tunnel للوصول عن بعد الآمن
-- [ ] InfluxDB + Grafana للتحليلات
+### `mmp-feature-2` — Threshold Alerts + Sensor Log (3 أيام)
 
----
+- [ ] تعريف 12 threshold (pH, EC, TDS, ...)
+- [ ] جدول `compliance_events` في PostgreSQL
+- [ ] Telegram bot: "آخر تنبيه" + "تقرير اليوم"
 
-## 🔵 P3 — مستقبل (للخطط الأبعد)
+### `mmp-feature-3` — Saudi GAP Pre-Audit Checklist (7 أيام)
 
-### `sensors-pipeline` — MQTT → KB تلقائي
-- [ ] MQTT حساسات الميدان → n8n → PostgreSQL/TimescaleDB
-- [ ] استخراج تلقائي للأحداث الشاذة → events.md
-
-### `vision-ai` — Pi 5 → KB
-- [ ] كاميرا على Pi 5 → captures دورية
-- [ ] Claude Vision API → تحليل صحة النبات
-- [ ] نتائج → events.md + tasks/pending.md
-
-### `pi5-fastapi` — استئناف
-- [ ] Phase 3 Session B (Actions)
-- [ ] Phase 3 Session C (Engine)
-- [ ] Phase 3 Session D (DB+API)
-- [ ] Phase 4 (MQTT + HA Auto-Discovery)
-- [ ] Phase 5 (Frontend wiring)
-- > الشرط: 5-10 عملاء HA مستقرّين أوّلاً
-
-### `kb` — Layer 2 + Layer 3
-- [ ] Layer 2: سكربت `claude curate` على CM5
-- [ ] Layer 3: MCP Server مخصّص + Knowledge Graph
-- [ ] (محتمل) منتج SaaS منفصل
+- [ ] دراسة معايير سعودي جاب الـ 14
+- [ ] Dashboard تفاعلي على Vercel
+- [ ] محتوى لكل بند (شرح + خطوات + تكلفة)
 
 ---
 
-## 📊 التوزيع الحالي
+## 🔵 P3 — يونيو (التموضع الرسمي + التسويق)
 
-| الأولوية | عدد المهام | المسؤول الافتراضي |
-|---|---|---|
-| 🔴 P0 | 17 | علي |
-| 🟡 P1 | 8 | علي + أيمن |
-| 🟢 P2 | 11 | الفريق |
-| 🔵 P3 | 6 | لاحقاً |
+### `mewa-positioning`
+
+- [ ] تسجيل iGarden في منصة نما
+- [ ] لقاء فرع MEWA الغربية
+- [ ] استفسار صندوق التنمية الزراعية (اعتماد المورّدين)
+- [ ] تسجيل في منشآت
+
+### `marketing`
+
+- [ ] رفع Case Study #1 (customer-002) على igarden.sa
+- [ ] LinkedIn: 4 منشورات أسبوعية
+- [ ] التقدم لهاكاثونات/مسابقات زراعة ذكية
 
 ---
 
