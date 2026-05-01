@@ -707,6 +707,22 @@
 2026-04-30 | contracts | Phase-2 contract template needs: SLA, internet backup, software updates, data ownership
 ```
 
+### ai-daily-routine
+
+```
+2026-05-01 | ai-daily-routine | Strategic decision: daily AI tools/updates research adopted as core daily routine
+2026-05-01 | ai-daily-routine | 3-layer system designed (sources → Claude filter → Telegram + KB archive)
+2026-05-01 | ai-daily-routine | Time slot fixed: 21:00 local (evening review before sleep)
+2026-05-01 | ai-daily-routine | Language locked: Arabic only
+2026-05-01 | ai-daily-routine | Sources locked (3 only): Ben's Bites + Anthropic News + The Rundown AI
+2026-05-01 | ai-daily-routine | Weekly cadence: Sun-Thu reading, Fri review, Sat rest
+2026-05-01 | ai-daily-routine | Phase 1 (manual) starts 2026-05-02
+2026-05-01 | ai-daily-routine | Phase 2 (n8n automation on CM5) scheduled review date: 2026-05-16
+2026-05-01 | ai-daily-routine | Daily alarm configured on Android (21:00, all 7 days) — pending first-night test
+2026-05-01 | ai-daily-routine | Daily brief markdown template defined (5 sections)
+2026-05-01 | ai-daily-routine | KB archive path: ai-daily/YYYY-MM/DD.md
+```
+
 ---
 
 ## استخدام

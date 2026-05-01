@@ -1,6 +1,6 @@
 # 📋 المهام المؤجَّلة — iGarden
 
-> **آخر تحديث:** 2026-04-30
+> **آخر تحديث:** 2026-05-01
 > **الصيغة:** كل مهمة لها priority + entity مرتبط + سياق مختصر + ربط بـ events.md
 > **المبدأ:** إذا اكتملت مهمة → تُحذف من هنا + تُضاف كحدث في events.md
 > **الاستراتيجية الناظمة:** Proof-First → Positioning → MMP — راجع [`../decisions/2026-04-30-strategy-pivot.md`](../decisions/2026-04-30-strategy-pivot.md)
@@ -12,16 +12,35 @@
 | اليوم | المهمة الرئيسية |
 |---|---|
 | الجمعة 1 مايو | KB sync + رفع خطاب التقسيط + تدوير الـ tokens + بدء أعمال customer-002 |
-| السبت 2 مايو | معايرة pH + إرسال Solar RFQ |
-| الأحد 3 مايو | حل TDS UART + متابعة سعيد على ZATCA |
-| الإثنين 4 مايو | توسيع SD card |
-| الثلاثاء 5 مايو | حل شاشة اللمس + تجهيز مواد سنبلة |
-| الأربعاء 6 مايو | البروفة النهائية للعرض |
-| الخميس 7 مايو | ⭐ **عرض سنبلة (Phase-2 expansion offer)** |
+| السبت 2 مايو | الاشتراك في 3 مصادر AI Daily + معايرة pH + إرسال Solar RFQ |
+| الأحد 3 مايو | أول AI Daily Brief @21:00 + حل TDS UART + متابعة سعيد على ZATCA |
+| الإثنين 4 مايو | AI Daily @21:00 + توسيع SD card |
+| الثلاثاء 5 مايو | AI Daily @21:00 + حل شاشة اللمس + تجهيز مواد سنبلة |
+| الأربعاء 6 مايو | AI Daily @21:00 + البروفة النهائية للعرض |
+| الخميس 7 مايو | AI Daily @21:00 + ⭐ **عرض سنبلة (Phase-2 expansion offer)** |
+| الجمعة 8 مايو | 🔁 أول مراجعة أسبوعية لـ AI Daily |
 
 ---
 
 ## 🔴 P0 — يبدأ 2026-05-01 (هذا الأسبوع)
+
+### `ai-daily-routine` — الاشتراك في المصادر الثلاثة ⏰ **السبت 2026-05-02 (10 دقائق)**
+
+> 🔗 راجع [`../ai-daily/README.md`](../ai-daily/README.md) — لا تُضِف مصادر إضافية قبل أسبوعين
+
+- [ ] الاشتراك في **Ben's Bites** — https://bensbites.com
+- [ ] إضافة **Anthropic News** كـ bookmark/RSS — https://www.anthropic.com/news
+- [ ] الاشتراك في **The Rundown AI** — https://www.therundown.ai
+- [ ] استخدام بريد `info@igarden.sa` لجميع الاشتراكات
+- [ ] حفظ قالب الموجز في تطبيق Notes (موجود أيضاً في `ai-daily/README.md`)
+- [ ] اختبار منبّه Android 21:00 ليلة السبت (لم يُختبر بعد)
+
+### `ai-daily-routine` — أول مراجعة أسبوعية ⏰ **الجمعة 2026-05-08**
+
+- [ ] تخصيص 30 دقيقة لمراجعة موجزات الأسبوع
+- [ ] أي مصدر كان الأكثر فائدة؟
+- [ ] ما يستحق التحويل لمهمة في `tasks/pending.md`؟
+- [ ] إضافة أحداث في `events.md` (entity: `ai-daily-routine`)
 
 ### `installment-request` — رفع خطاب تقسيط VAT Q1 2026 ⏰ **2026-05-01**
 
@@ -138,6 +157,22 @@
 
 ---
 
+## 🟢 P2 — مجدول لـ 2026-05-16 (AI Daily Phase 2)
+
+### `ai-daily-routine` — الانتقال إلى n8n على CM5
+
+> 🔗 راجع [`../ai-daily/README.md`](../ai-daily/README.md) قسم prompt الفلترة
+
+- [ ] مراجعة تجربة الأسبوعين (2026-05-02 → 2026-05-15)
+- [ ] تصميم n8n workflow على CM5:
+  - RSS Aggregator node (5–7 مصادر)
+  - Claude API node (Sonnet 4.6) للفلترة بالعربي
+  - Telegram node لإرسال الموجز على @igarden_sa_bot
+  - Google Drive node للأرشفة
+- [ ] إضافة معايير الفلترة الشخصية (مبنية على بيانات الأسبوعين)
+
+---
+
 ## 🟢 P2 — 22 مايو → 5 يونيو (MMP)
 
 > Minimum Marketable Product — 3 features في 15 يوم عمل
@@ -178,6 +213,11 @@
 - [ ] رفع Case Study #1 (customer-002) على igarden.sa
 - [ ] LinkedIn: 4 منشورات أسبوعية
 - [ ] التقدم لهاكاثونات/مسابقات زراعة ذكية
+
+### `ai-daily-routine` — التطوير المتقدم
+
+- [ ] PR تلقائي على repo `igarden-kb` للعناصر القابلة للتنفيذ
+- [ ] mini-dashboard على `igarden.sa/internal/ai-radar`
 
 ---
 
